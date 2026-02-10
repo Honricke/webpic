@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Contato</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container p-4 px-sm-0 text-center">
+        <h1 class="fs-1">Central de Atendimento WebPic!</h1>
+        <p class="fs-6 mt-3">
+          Estamos sempre prontos pra te ajudar! Clique em um dos botões abaixo e
+          fale com a gente!
+        </p>
+        <div
+          class="d-flex justify-content-center align-items-center align-items-md-stretch flex-column flex-md-row gap-3"
+        >
+          <div
+            class="rounded-4 shadow bg-secondary py-4 px-3 w-100"
+            style="max-width: 400px"
+          >
+            <p class="fs-6">
+              Este formulário é exclusivo para clientes abrirem protocolos com
+              nossas equipes de Suporte ou Financeiro. Envie dúvidas técnicas,
+              sugestões, reclamações ou solicitações como 2ª via de boleto,
+              alteração cadastral e troca de titularidade.
+            </p>
+            <button class="main-button btn">Começar o meu protocolo</button>
+          </div>
+          <div
+            class="rounded-4 shadow bg-secondary py-4 px-3"
+            style="max-width: 400px; height: fit-content"
+          >
+            <p class="fs-6">
+              Quer saber mais sobre o Dapic ou tem alguma dúvida ou sugestão?
+              Mande uma mensagem pra gente e vamos conversar pelo WhatsApp!
+            </p>
+            <button class="light-button btn">Começar o meu protocolo</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              loading="lazy"
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-7 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Canal de Denúncia</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="container p-4 px-md-0 d-flex flex-column gap-3 align-items-center"
+      >
+        <h1 class="fs-1 text-center">Canal de Denúncia</h1>
+        <p class="fs-7 fs-md-6 text-center" style="max-width: 1000px">
+          A criação do canal de denúncias, em conformidade com o MTP N° 4.219 de
+          20 de dezembro de 2022, reflete o compromisso firme da WebPic em
+          promover um ambiente de trabalho ético, seguro e respeitoso. Este
+          canal é um instrumento essencial para a manutenção e fortalecimento de
+          nossa cultura de integridade corporativa, permitindo que
+          colaboradores, parceiros e demais stakeholders reportem, de forma
+          confidencial e, se desejarem, anônima, qualquer conduta que considerem
+          inadequada ou que viole os princípios éticos, políticas internas ou
+          legislação aplicável.
+          <br /><br />
+          Garantimos total sigilo e um tratamento justo e adequado de cada caso,
+          assegurando a ausência de conflitos de interesse. A integridade das
+          informações fornecidas recai sobre o responsável pela denúncia, mas
+          todas as informações recebidas serão meticulosamente verificadas pelo
+          nosso Comitê de Ética durante o processo de análise.
+          <br /><br />
+          Com base nesta análise, as ações apropriadas serão determinadas e
+          implementadas conforme o critério exclusivo da WebPic.
+          <br /><br />
+          Respeitando integralmente as normas vigentes, incluindo a MTP N° 4.219
+          de 20 de dezembro de 2022 bem como a Lei Geral de Proteção de Dados
+          (LGPD), especialmente no que tange ao tratamento de dados sensíveis
+          contidos em denúncias. Estamos dedicados a respeitar todas as
+          disposições legais pertinentes, garantindo a proteção e a privacidade
+          dessas informações.
+        </p>
+
+        <div
+          class="bg-secondary rounded-4 px-5 py-4 mx-auto w-100"
+          style="max-width: 900px"
+        >
+          <!--Denuncia Enviada-->
+          <div class="d-none">
+            <h2 class="text-center mb-4">Denúncia Enviada!</h2>
+            <p class="fs-7 fs-md-6 text-center">
+              A sua denúncia foi enviada com sucesso!
+              <br />
+              <br />
+              Conforme informado no texto acima, o nosso Comitê de Ética irá
+              verificar as informações recebidas e com base nisso, as ações
+              apropriadas serão implementadas.
+            </p>
+          </div>
+
+          <p class="fs-7 fs-md-6 text-center">
+            Os campos com asterisco (*) são obrigatórios
+          </p>
+
+          <form action="" class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex flex-md-row flex-column gap-3">
+              <div class="w-100">
+                <label
+                  for="inputInci"
+                  class="form-label text-primary fw-bold fs-6"
+                  >*Você concorda com os termos acima?</label
+                >
+
+                <div class="d-flex gap-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input fake-radio check"
+                      type="checkbox"
+                      name="concordancia"
+                      id="concSim"
+                      value="sim"
+                    />
+                    <label class="form-check-label fs-6 ms-2" for="concSim"
+                      >Sim</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input fake-radio check"
+                      type="checkbox"
+                      name="concordancia"
+                      id="concNao"
+                      value="nao"
+                      checked
+                    />
+                    <label class="form-check-label fs-6 ms-2" for="concNao"
+                      >Não</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-100">
+                <label
+                  for="inputInci"
+                  class="form-label text-primary fw-bold fs-6"
+                  >Gostaria de se identificar?</label
+                >
+
+                <div class="d-flex gap-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input fake-radio check"
+                      type="checkbox"
+                      name="identificar"
+                      id="identiSim"
+                      value="sim"
+                    />
+                    <label class="form-check-label fs-6 ms-2" for="identiSim"
+                      >Sim</label
+                    >
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input fake-radio check"
+                      type="checkbox"
+                      name="identificar"
+                      id="identiNao"
+                      value="nao"
+                    />
+                    <label class="form-check-label fs-6 ms-2" for="identiNao"
+                      >Não</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-md-row flex-column gap-3">
+              <div class="w-100">
+                <label class="form-label text-primary fw-bold fs-6"
+                  >Qual é a sua relação com a WebPic?</label
+                >
+
+                <div>
+                  <div class="d-flex">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input fake-radio check"
+                        type="checkbox"
+                        name="relacao"
+                        id="cliente"
+                        value="cliente"
+                      />
+                      <label class="form-check-label fs-6 ms-2" for="cliente"
+                        >Cliente</label
+                      >
+                    </div>
+
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input fake-radio check"
+                        type="checkbox"
+                        name="relacao"
+                        id="colaborador"
+                        value="colaborador"
+                      />
+                      <label
+                        class="form-check-label fs-6 ms-2"
+                        for="colaborador"
+                        >Colaborador</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input fake-radio check"
+                        type="checkbox"
+                        name="relacao"
+                        id="parceiro"
+                        value="parceiro"
+                      />
+                      <label class="form-check-label fs-6 ms-2" for="parceiro"
+                        >Parceiro</label
+                      >
+                    </div>
+                    <div class="form-check w-100">
+                      <input
+                        class="form-check-input fake-radio check"
+                        type="checkbox"
+                        name="relacao"
+                        id="fornecedor"
+                        value="fornecedor"
+                      />
+                      <label class="form-check-label fs-6 ms-2" for="fornecedor"
+                        >Fornecedor</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-check w-100">
+                    <input
+                      class="form-check-input fake-radio check"
+                      type="checkbox"
+                      name="relacao"
+                      id="outro"
+                      value="outro"
+                    />
+                    <label class="form-check-label fs-6 ms-2" for="outro"
+                      >Outro, qual?</label
+                    >
+                  </div>
+
+                  <input
+                    id="outraRelacao"
+                    name="outraRelacao"
+                    class="form-control py-1 px-0 mt-1 bg-secondary border-bottom border-dark"
+                    type="text"
+                    placeholder="Escreva aqui"
+                  />
+                </div>
+              </div>
+
+              <div class="w-100">
+                <label
+                  for="nomeEmpresa"
+                  class="form-label text-primary fw-bold fs-6"
+                  >Nome da empresa onde você trabalha</label
+                >
+                <input
+                  class="form-control py-2 bg-secondary border-dark"
+                  type="text"
+                  id="nomeEmpresa"
+                  placeholder="Este campo é opicional"
+                  name="nomeEmpresa"
+                />
+              </div>
+            </div>
+
+            <div class="w-100">
+              <label
+                for="inputInci"
+                class="form-label text-primary fw-bold fs-6"
+                >*Qual tipo de denúncia você deseja fazer?</label
+              >
+
+              <div>
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="agressao"
+                    value="agressao"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="agressao"
+                    >Agressão Física</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="assedio"
+                    value="assedio"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="assedio"
+                    >Assédio moral e/ou sexual</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="conflito"
+                    value="conflito"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="conflito"
+                    >Conflito de interesses ou favorecimento</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="descumprimento"
+                    value="descumprimento"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="descumprimento"
+                    >Descumprimento de normas e políticas internas</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="desvio"
+                    value="desvio"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="desvio"
+                    >Desvio de comportamento</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="difamacao"
+                    value="difamacao"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="difamacao"
+                    >Difamação</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="discriminacao"
+                    value="discriminacao"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="discriminacao"
+                    >Discriminação</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="fraude"
+                    value="fraude"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="fraude"
+                    >Fraudes e/ou corrupção</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="roubo"
+                    value="roubo"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="roubo"
+                    >Roubo, furto ou danos aos ativos da empresa</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="lgpd"
+                    value="lgpd"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="lgpd"
+                    >Uso indevido de informações confidenciais</label
+                  >
+                </div>
+
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input fake-radio check"
+                    type="checkbox"
+                    name="tipoDenun"
+                    id="fornecedor"
+                    value="fornecedor"
+                  />
+                  <label class="form-check-label fs-6 ms-2" for="fornecedor"
+                    >Outro</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="w-100">
+              <label for="where" class="form-label text-primary fw-bold fs-6"
+                >*Onde o fato ocorreu?</label
+              >
+              <input
+                class="form-control py-2 bg-secondary border-dark"
+                type="text"
+                id="where"
+                name="where"
+              />
+            </div>
+
+            <div class="w-100">
+              <label for="when" class="form-label text-primary fw-bold fs-6"
+                >*Quando o fato ocorreu?</label
+              >
+              <input
+                class="form-control py-2 bg-secondary border-dark"
+                type="text"
+                id="when"
+                name="when"
+              />
+            </div>
+
+            <div class="w-100">
+              <label
+                for="denunciadoInfo"
+                class="form-label text-primary fw-bold fs-6"
+                >*Dados do denunciado (nome, cargo, área de atuação)</label
+              >
+              <input
+                class="form-control py-2 bg-secondary border-dark"
+                type="text"
+                id="denunciadoInfo"
+                name="denunciadoInfo"
+              />
+            </div>
+
+            <div class="w-100">
+              <label
+                for="terceirosInfo"
+                class="form-label text-primary fw-bold fs-6"
+                >Dados de terceiros envolvidos, se houver (nome, cargo, área de
+                atuação)</label
+              >
+              <input
+                class="form-control py-2 bg-secondary border-dark"
+                type="text"
+                id="terceirosInfo"
+                name="terceirosInfo"
+                placeholder="Este campo é opcional"
+              />
+            </div>
+
+            <div class="w-100">
+              <label
+                for="descricao"
+                class="form-label text-primary fw-bold fs-6"
+                >*Descreva a sua dennúncia com o máximo de detalhes possíveis,
+                incluindo nomes, testemunhas, datas, locais e provas</label
+              >
+              <textarea
+                class="form-control py-2 bg-secondary border-dark"
+                type="text"
+                id="descricao"
+                name="descricao"
+                style="resize: none"
+              ></textarea>
+            </div>
+
+            <input
+              type="submit"
+              class="btn main-button d-block mx-auto"
+              value="Enviar minha denúncia"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              loading="lazy"
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-7 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("change", function (e) {
+        if (!e.target.classList.contains("fake-radio")) return;
+
+        if (e.target.checked) {
+          const group = e.target.name;
+
+          document
+            .querySelectorAll(`.fake-radio[name="${group}"]`)
+            .forEach((cb) => {
+              if (cb !== e.target) cb.checked = false;
+            });
+        }
+      });
+    </script>
+    <script>
+      //Função para trocar entre o form e a denúncia enviada, mas
+      function toggleFormSiblingsOnSubmit(form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // remova depois, se for enviar de verdade
+
+          const parent = form.parentElement;
+          const siblings = Array.from(parent.children);
+
+          siblings.forEach((el) => {
+            if (el === form) {
+              el.classList.add("d-none");
+            } else {
+              el.classList.toggle("d-none");
+            }
+          });
+        });
+      }
+
+      // uso
+      toggleFormSiblingsOnSubmit(document.querySelector("form"));
+    </script>
+  </body>
+</html>

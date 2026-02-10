@@ -1,0 +1,88 @@
+a.nav-link:hover,
+a.dropdown-item:hover {
+  color: #0000008c !important;
+}
+
+.dropdown-menu {
+  width: fit-content;
+  
+  .column {
+    width: 250px;
+  }
+  a.dropdown-item {
+    word-break: break-word;
+    white-space: normal;
+  }
+  //Removendo mudança de bg nos dropdowns quando hover
+  a.dropdown-item:hover {
+    background-color: transparent;
+  }
+}
+
+div.navbar-container {
+  //Ajustando logo para ser visualmente mais agradável
+  img.logo-img {
+    transform: translateY(5%);
+  }
+
+  .offcanvas {
+    max-width: 300px;
+
+    //Adicionando incone de +
+    span.plus-icon {
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 700;
+      color: $primary;
+      font-size: 24px;
+      line-height: 24px;
+      transform: translatey(-7%);
+      margin-left: auto;
+    }
+  }
+
+  button.button-close {
+    background-image: url("../assets/img/icons/IconClose.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.nav-item {
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      ::before {
+        content: "";
+        font-weight: 900;
+        background-image: url("../assets/img/icons/Seta-color.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0.45em;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    ul {
+      li {
+        ::before {
+          top: 0.6em;
+        }
+      }
+    }
+  }
+}

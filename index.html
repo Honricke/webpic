@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Dapic</title>
+  </head>
+
+  <body class="bg-light">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--Sessão 1 - Desktop-->
+      <section class="container-fluid p-0 main-section d-none d-md-block">
+        <div class="container py-5 my-3">
+          <div class="w-50 d-grid gap-4">
+            <h1 class="fs-3 fw-bold">
+              Sistema para indústria de confecções ou lojas de roupas completo e
+              fácil de usar!
+            </h1>
+            <p class="text-break fs-6">
+              Controle seu estoque, vendas e emissão de notas com um ERP pensado
+              para confecções e lojas de roupas de todos os tamanhos.
+            </p>
+            <h2 class="fs-5 fw-bold">Planos a partir de R$ 399!*</h2>
+            <div>
+              <a
+                class="btn main-button"
+                href="#sessao-contato"
+                style="justify-self: start"
+              >
+                Quero conhecer o Dapic!
+              </a>
+              <p class="mt-1 fs-8">
+                *Valor para o Plano Light na modalidade mensal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Sessão 1 - Mobile-->
+      <section class="container-fluid p-0 main-section d-md-none">
+        <div class="container py-4 my-3">
+          <h1 class="fs-3 fw-bold text-center">
+            Sistema para indústria de confecções ou lojas de roupas completo e
+            fácil de usar!
+          </h1>
+        </div>
+      </section>
+      <section class="container-fluid d-md-none">
+        <div class="container py-4">
+          <p class="text-break fs-7 text-center m-0">
+            Controle seu estoque, vendas e emissão de notas com um ERP pensado
+            para confecções e lojas de roupas de todos os tamanhos.
+          </p>
+          <h2 class="fs-5 fw-bold text-center my-4">
+            Planos a partir de R$ 399!*
+          </h2>
+          <button
+            class="btn main-button mx-auto d-block"
+            style="justify-self: start"
+          >
+            Quero conhecer o Dapic!
+          </button>
+        </div>
+      </section>
+
+      <!--Sessão 2-->
+      <section class="container-fluid bg-primary">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h1 class="fs-3 text-light-blue text-center">
+            + de XXXX CNPJs em todo Brasil
+          </h1>
+          <p class="text-light text-center fw-light fs-7 fs-md-6">
+            confiam no Dapic, o melhor ERP para confecção, para controlar
+            produção, estoque, vendas e emissão de nota fiscal com eficiência.
+          </p>
+        </div>
+      </section>
+
+      <!--Sessão 3-->
+      <section class="container-fluid bg-secondary">
+        <div class="container py-3">
+          <div class="swiper companies-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/shopee@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/zax@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/shopee@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/zax@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/shopee@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/img/carousel/zax@2x.png"
+                  class="img-fluid w-100"
+                  style="max-width: 225px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Sessão 4, 5 e 6-->
+      <section>
+        <!--Sessão 4 - Desktop-->
+        <section class="container-fluid d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <h1 class="fs-3">
+                Produção sob controle, da entrada de matéria-prima à entrega
+              </h1>
+              <p class="text-break my-4">
+                Gerencie cada etapa da sua confecção com precisão. O Dapic
+                permite acompanhar pedidos, fichas técnicas, ordens de produção
+                e apontamentos de forma integrada. Organize sua produção por
+                modelo, grade de tamanho e cor, garantindo rastreabilidade e
+                agilidade na entrega final.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 4 - Mobile-->
+        <section class="container-fluid d-md-none">
+          <div class="container pb-5 pt-4 text-center">
+            <h1 class="fs-3">
+              Produção sob controle, da entrada de matéria-prima à entrega
+            </h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4 text-center">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada. Organize sua produção por modelo,
+              grade de tamanho e cor, garantindo rastreabilidade e agilidade na
+              entrega final.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
+
+        <!--Sessão 5 - Desktop-->
+        <section class="container-fluid bg-secondary d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_estoque_início@2x.webp"
+                alt=""
+              />
+            </div>
+            <div class="col">
+              <h1 class="fs-3">Estoque sempre certo, sem surpresas</h1>
+              <p class="text-break my-4">
+                Evite rupturas ou excesso de produtos. Com o Dapic, seu estoque
+                é atualizado automaticamente a cada venda, compra ou produção.
+                Controle por grade (tamanho e cor), alertas de mínimo,
+                localização em múltiplos depósitos e visualização clara do que
+                está disponível, reservado ou em produção.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 5 - Mobile-->
+        <section class="container-fluid bg-secondary d-md-none">
+          <div class="container pb-5 pt-4 text-center">
+            <h1 class="fs-3">Estoque sempre certo, sem surpresas</h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_estoque_início@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4">
+              Evite rupturas ou excesso de produtos. Com o Dapic, seu estoque é
+              atualizado automaticamente a cada venda, compra ou produção.
+              Controle por grade (tamanho e cor), alertas de mínimo, localização
+              em múltiplos depósitos e visualização clara do que está
+              disponível, reservado ou em produção.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
+
+        <!--Sessão 6 - Desktop-->
+        <section class="container-fluid d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <h1 class="fs-3">Emissão de nota fiscal sem complicação</h1>
+              <p class="text-break my-4">
+                Emita NF-e e NFC-e direto do sistema, com integração automática
+                à Sefaz. O Dapic facilita o faturamento de pedidos e vendas em
+                poucos cliques, evitando erros fiscais. Ideal para lojas
+                físicas, online e indústrias de confecção que precisam manter
+                tudo em conformidade com agilidade.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_BI-faturamento@2x.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 6 - Mobile-->
+        <section class="container-fluid d-md-none">
+          <div class="container pb-5 pt-4 text-center d-md-block">
+            <h1 class="fs-3">Emissão de nota fiscal sem complicação</h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_BI-faturamento@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4">
+              Emita NF-e e NFC-e direto do sistema, com integração automática à
+              Sefaz. O Dapic facilita o faturamento de pedidos e vendas em
+              poucos cliques, evitando erros fiscais. Ideal para lojas físicas,
+              online e indústrias de confecção que precisam manter tudo em
+              conformidade com agilidade.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
+      </section>
+
+      <!--Sessão 7-->
+      <section class="container-fluid bg-secondary">
+        <div class="container p-4 text-center position-relative">
+          <h1 class="fs-3">
+            Quem usa, recomenda: veja o que dizem sobre o Dapic
+          </h1>
+          <p class="fs-6">
+            Veja como o Dapic transforma a gestão de quem vive o dia a dia das
+            confecções.
+          </p>
+          <div class="swiper bg-light rounded-4 comments-swiper text-start">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center gap-5 mt-4 justify-content-md-between px-md-4 position-md-absolute top-50 w-100"
+            style="z-index: 1000"
+          >
+            <img
+              class="seta-prev me-3 ms-md-3 me-md-0"
+              src="./assets/img/icons/Seta.png"
+              style="transform: rotate(180deg)"
+              alt=""
+            />
+            <img
+              class="seta-next me-md-5 pe-md-3"
+              src="./assets/img/icons/Seta.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Sessão 8-->
+      <section class="container-fluid">
+        <div class="container text-center py-4">
+          <h1 class="fs-3">Tudo integrado, sem complicação</h1>
+          <p class="fs-6 text-center">
+            O Dapic integra com marketplaces, e-commerces, forças de venda, RFID
+            entre outros. Um sistema completo para quem precisa de agilidade e
+            controle em todos os pontos da operação.
+          </p>
+          <div
+            class="d-flex flex-wrap flex-md-nowrap justify-content-center gap-4 my-4"
+          >
+            <div class="img-company-item">
+              <img
+                src="./assets/img/commom/audaces@2x.png"
+                alt=""
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="img-company-item">
+              <img
+                src="./assets/img/commom/mercado livre@2x.png"
+                alt=""
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="img-company-item">
+              <img
+                src="./assets/img/commom/itag@2x.png"
+                alt=""
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="img-company-item">
+              <img
+                src="./assets/img/commom/shopee@2x.png"
+                alt=""
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+            <div class="img-company-item">
+              <img
+                src="./assets/img/commom/zax@2x.png"
+                alt=""
+                loading="lazy"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <a
+            class="main-button btn"
+            href="./integracoes.html"
+            style="border-radius: 50px"
+          >
+            Veja todas as integrações do Dapic!
+          </a>
+        </div>
+      </section>
+
+      <!--Sessão 9-->
+      <section class="container-fluid bg-primary" id="sessao-contato">
+        <div class="container d-flex flex-column align-items-center py-4">
+          <h1 class="fs-3 text-light mb-4 text-center">
+            Quero usar o melhor ERP para confecção e loja de roupas
+          </h1>
+          <form
+            action="mailto:someone@example.com"
+            class="d-flex flex-column align-items-center w-100"
+          >
+            <div
+              class="d-flex flex-column justify-content-center flex-md-row gap-4 mb-3 w-100"
+            >
+              <div>
+                <label for="inputName" class="form-label text-light"
+                  >*Nome</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-primary text-light"
+                  id="inputName"
+                />
+              </div>
+              <div>
+                <label for="inputName" class="form-label text-light"
+                  >*Telefone</label
+                >
+                <input
+                  type="tel"
+                  class="form-control bg-primary text-light"
+                  id="inputName"
+                />
+              </div>
+              <div>
+                <label for="inputName" class="form-label text-light"
+                  >*E-mail</label
+                >
+                <input
+                  type="email"
+                  class="form-control bg-primary text-light"
+                  id="inputName"
+                />
+              </div>
+              <div>
+                <label for="inputName" class="form-label text-light"
+                  >*Empresas</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-primary text-light"
+                  id="inputName"
+                />
+              </div>
+            </div>
+            <input
+              type="submit"
+              class="btn main-button px-md-5 bg-light-blue mx-auto mt-3 text-break d-block"
+              value="Fale com um especialista agora!"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              loading="lazy"
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-7 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".companies-swiper", {
+        slidesPerView: 4, // desktop
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2, // mobile
+          },
+          768: {
+            slidesPerView: 4, // tablet e acima
+          },
+        },
+      });
+      const commentsSwiper = new Swiper(".comments-swiper", {
+        slidesPerView: 1, // desktop
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".seta-next",
+          prevEl: ".seta-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1, // tablet e acima
+          },
+          1200: {
+            slidesPerView: 1, // tablet e acima
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

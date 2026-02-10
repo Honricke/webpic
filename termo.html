@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Termos de Uso</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container p-4">
+        <h1 class="fs-1 text-center mb-4">Termos de Uso</h1>
+        <p class="fs-7 fs-md-6 text-center text-md-start">
+          Este Termo de Uso regula a relação entre o CONTRATANTE (pessoa física
+          ou jurídica), doravante denominado CONTRATANTE e WEBPIC
+          DESENVOLVIMENTO DE SOFTWARE LTDA., pessoa jurídica de direito privado,
+          inscrita no CNPJ/MF sob o número 08.681.915/0001-11, com sede na Rua
+          Silva Jardim, nº 3630, Santa Cruz, CEP 15.014-050, nesta cidade de São
+          José do Rio Preto – SP, doravante denominada CONTRATADA, para uso dos
+          produtos e serviços DAPIC.<br /><br />
+          Preliminarmente: Os produtos e serviços disponibilizados pela
+          CONTRATADA serão regidos por esse Termo, mas poderão se aplicar termos
+          ou exigências adicionais a determinados produtos e/ou serviços. Os
+          termos adicionais, se aplicáveis, estarão disponíveis com os produtos
+          e/ou serviços, na área do cliente, e se incorporarão a esse Termo,
+          caso você utilize-os.<br /><br />
+          Preliminarmente: Ao optar por um dos planos oferecidos, o COTRATANTE
+          automaticamente concederá aceitação ao conteúdo do presente Termo de
+          Uso, concordará, ainda, que qualquer indivíduo que utilizar a sua
+          conta em seu nome também respeitará referido Termo de Uso.<br /><br />
+          Preliminarmente: A celebração do presente contrato é comprovada pela
+          concordância da CONTRATADA pela via eletrônica e pela confirmação de
+          leitura no ato da contratação. A CONTRATADA declara desde já ter lido
+          o presente contrato na sua integralidade, concordando com todas as
+          cláusulas e disposições transcritas abaixo, além de declarar ter
+          preenchido a ficha cadastral com suas informações.<br /><br />
+          1 – DO OBJETO<br /><br />
+          1.1. O presente instrumento particular tem por objeto a Licença de uso
+          do Software, ora denominado DAPIC, não exclusivo e intransferível,
+          mediante pagamento periódico e de acordo com a opção de contratação,
+          descrita no quadro resumo, para um número determinado de CNPJs
+          (Empresas), com até um número determinado de usuários on-line
+          compartilhando o mesmo banco de dados. <br /><br />1.1.1. Poderão ser
+          agregados ao sistema, novos usuários e CNPJs que compartilharão o
+          mesmo banco de dados. Neste caso deverão ser orçados e previamente
+          aprovados pela CONTRATADA. Em caso de aprovação, esse acréscimo será
+          feito através de aditivos ao presente instrumento. a - O software ora
+          contratado dispõe de uma área adicional exclusiva para o acesso dos
+          representantes da CONTRATANTE ao sistema DAPIC. b - Caso o CONTRATANTE
+          necessite de um número maior de acesso, este pagará um valor
+          suplementar, previamente informado pela CONTRATADA, por usuário que
+          adicionar ao sistema. Neste caso será feito um aditivo ao presente
+          instrumento.<br /><br />
+          1.1.2. Existem outros módulos que podem ser contratados adicionalmente
+          ao Software DAPIC, sendo, o Módulo de BI (business intelligence) Basic
+          ou Plus, integração com plataformas de e-commerce, integração com
+          forças de vendas, integração com Audaces e integração com RFID. Tais
+          módulos poderão ser adquirido através de condições e preços
+          estipulados através de aditivos ao presente instrumento.<br /><br />
+          1.2. Considera-se a Licença de uso do Software enquanto adimplida
+          todas obrigações do presente instrumento, principalmente no que tange
+          as mensalidades.<br /><br />
+          1.3. A presente Licença de uso do Software terá os aspectos da
+          irretratabilidade e da irrevogabilidade.<br /><br />
+          1.4. A Licença de uso será renovado mensalmente, com a confirmação do
+          pagamento, com início na data prevista no quadro resumo.<br /><br />
+          1.5. Este Termos de Uso entra em vigor na data de sua aceitação pelo
+          usuário e permanece em vigor por tempo indeterminado enquanto o
+          Usuário mantiver ativo o seu cadastro no DAPIC ou até que seja
+          rescindido ou encerrado por qualquer das partes.<br /><br />
+          2 – CONDIÇÕES DE USO DO SOFTWARE <br /><br />2.1. O Software DAPIC
+          está hospedado em servidores dedicados, com disponibilidade (uptime)
+          em 99% (noventa e nove por cento) do tempo no período de um ano.<br /><br />
+          2.2. Fica reservado à CONTRATADA o direito de comercializar o Software
+          objeto deste Termo, de forma irrestrita e ilimitada, exercendo ampla e
+          irrestritamente seus direitos de propriedade sobre o mesmo, sem que,
+          para isso, necessite de qualquer autorização ou notificação da/para a
+          CONTRATANTE.<br /><br />
+          2.3. A Integração do software objeto do presente instrumento com
+          plataformas de e-commerce e/ou outros softwares, utilizadas pelo
+          CONTRATANTE, dependerá da análise de viabilidade técnica pela
+          CONTRATADA e, em sendo possível a integração, NÃO ESTANDO INCLUSO NO
+          PLANO INICIAL, haverá cobrança ADICIONAL pelo aludido serviço, em
+          valor a ser previamente orçado e informado ao CONTRATANTE. Em caso
+          afirmativo, serão feitos aditivos ao presente instrumento.
+          <br /><br />2.4. Os Serviços Adicionais e/ou Funcionalidades poderão
+          depender de contratação e formalização específica pela Licenciada
+          junto à CONTRATADA e poderão estar sujeitos a Termos e Condições
+          próprios. <br /><br />2.5. Caso a CONTRATANTE tenha interesse em
+          contratar os Serviços Adicionais ou Funcionalidades, basta realizar a
+          contratação diretamente nos canais da CONTRATADA, conforme
+          disponibilidade.<br /><br />
+          2.6. Integração com outros sistemas. O Software da CONTRATADA poderá
+          oferecer integração automática com outros sistemas, serviços e
+          produtos da CONTRATADA, de empresas do mesmo grupo econômico e/ou de
+          parceiros comerciais da CONTRATADA que podem trazer automatização a
+          uma parte das funcionalidades do Software da CONTRATADA, como, por
+          exemplo, emissão e registro de boletos, conciliação de pagamentos e
+          recebimentos, dentre outros.<br /><br />
+          3 – DO PREÇO<br /><br />
+          3.1. Como remuneração da mensalidade do software DAPIC, para o número
+          de CNPJs e USUÁRIOS online contratados (números definidos no quadro
+          resumo), o CONTRATANTE deverá pagar à CONTRATADA, o valor mensal
+          também descrito no quadro resumo.<br /><br />
+          3.2. O reajuste do valor da mensalidade será efetuado, anualmente,
+          pelo IPCA, sendo que o primeiro reajuste será com base no IPCA, cuja
+          data base é a relativa ao dia primeiro do mês subsequente a assinatura
+          do presente instrumento. Na falta ou impedimento, será utilizado
+          IGPM/FGV/SP ou ainda o INPC, e na falta, qualquer outro que possa
+          refletir de maneira segura a atualização monetária frente a inflação
+          apurada.<br /><br />
+          3.3. Será cobrado pela CONTRATADA, todo o mês de dezembro, a título de
+          TAXA DE MANUTENÇAO ANUAL DO SOFTWARE, 50% (cinquenta por cento) do
+          valor da mensalidade vigente. Tal taxa será devida ainda que o
+          CONTRATANTE não tenha 12 (doze) meses de vigência do contrato, sendo
+          que neste caso a cobrança será proporcional ao tempo de contrato.<br /><br />
+          3.4. Os pagamentos das mensalidades deverão ser efetuados por meio de
+          cartão de crédito, obedecendo o dia contratado, e os próximos
+          vencimentos se darão nos mesmos dias dos meses seguintes, ou primeiro
+          dia útil subsequente. A primeira mensalidade terá seu vencimento na
+          data do aceite deste termo de uso.<br /><br />
+          3.5. O atraso no pagamento das parcelas ensejará, a cobrança de multa
+          moratória de 2% (dois por cento), correção monetária (IPCA – data base
+          relativa ao respectivo vencimento) e juros moratórios de 1% (um por
+          cento) ao mês, até efetivo pagamento.<br /><br />
+          3.6. Independente do acima descrito, após decorridos o prazo de 06
+          (seis) dias do inadimplemento de qualquer pagamento decorrente das
+          obrigações do presente instrumento, acarretará a interrupção do
+          sistema, sendo que o reestabelecimento do mesmo se dará no prazo
+          máximo de 01 (um) dia útil, contados da efetiva comprovação do
+          pagamento em atraso.<br /><br />
+          3.7. O não recebimento das cobranças, ou dificuldade de efetuar o
+          pagamento por cartão de crédito, não justificam o atraso na quitação
+          dos mesmos, devendo a CONTRANTANTE solicitar a segunda via junto à
+          CONTRATADA através de e-mail, telefone, whatsapp ou acesso através do
+          portal do cliente, antes dos vencimentos ajustados.<br /><br />
+          3.8. Fica expressamente proibido e sem valor jurídico, o pagamento de
+          qualquer valor e sob qualquer título, a Representantes ou
+          Funcionários, sem a autorização expressa da CONTRATADA.<br /><br />
+          3.9. Pelo não pagamento de qualquer valor, o CONTRATANTE será
+          considerado devedor, podendo neste caso a CONTRATADA, por si ou por
+          intermédio de terceiros realizar os procedimentos legais de cobrança,
+          tais como avisos de cobrança, inscrição no cadastro de proteção ao
+          crédito, apontamento para protesto e ajuizamento de ação judicial
+          competente.<br /><br />
+          3.10. Em caso de inadimplemento dos pagamentos mensais de
+          responsabilidade da CONTRATADA, a CONTRATANTE irá encaminhar um aviso
+          relativo ao inadimplemento. Caso este perdure por mais de 06 (seis)
+          dias, o Software será interrompido, até que seja sanado o
+          inadimplemento. Não sendo sanado o inadimplemento, serão aplicadas as
+          regras dispostas nas Cláusulas 11.7 até 11.9, deste Termo, sem
+          prejuízo do disposto na Cláusula 3.9, supra.<br /><br />
+          4 – DO DIREITO AUTORAL<br /><br />
+          4.1. A implantação do Software não exaure todos os direitos autorais
+          da CONTRATADA sobre o programa ora implantado, independentemente de
+          registro, nos termos do § 3.º do artigo 2.º da Lei n.º 9.609/1998.<br /><br />
+          4.2. Este TERMO/CONTRATO está protegido pela Lei n. 9.609/98, de
+          19/02/1998 – Lei do Software e Lei n. 9.610/98, de 19/02/1998 – Lei de
+          Direitos Autorais, portanto a CONTRATANTE e terceiros, não poderão
+          copiar, emprestar, traduzir, modificar, adaptar, separar, desmontar,
+          customizar, desconfigurar, reconstruir ou promover personalização de
+          qualquer natureza, no software executável, total ou parcialmente, bem
+          como toda sua documentação e manuais.<br /><br />
+          4.3. Qualquer violação do software objeto deste Termo ensejará a
+          rescisão do presente ajuste, respondendo a CONTRATANTE, civil e
+          penalmente, pelos danos causados.<br /><br />
+          4.4. O CONTRATANTE concorda que as sugestões de melhoria e as
+          customizações solicitadas por ele a qualquer tempo podem ser incluídas
+          no DAPIC sem que isso gere qualquer compromisso de direitos autorais,
+          autorizando a CONTRATADA a comercializar o produto sem necessidade de
+          qualquer notificação e/ou compensação/indenização ao CONTRATANTE a
+          qualquer tempo.<br /><br />
+          5 – DA CONTRATADA E DO SUPORTE TÉCNICO<br /><br />
+          5.1. A CONTRATADA efetuará atualizações do DAPIC, as quais serão
+          automaticamente incorporadas ao software.<br /><br />
+          5.2. A CONTRATADA poderá, sem interferência da CONTRATANTE, realizar
+          correções e alterações que reconhecer como necessárias de uma versão
+          para outra do Software.<br /><br />
+          5.3. A CONTRATADA terá acesso ao banco de dados da CONTRATANTE, no que
+          tange apenas ao software, tendo em vista a natureza do serviço
+          prestado, sem esgotar o tema, temos como exemplos: manutenção e
+          suporte, migração de dados, análise de dados, integração de sistemas,
+          etc. O mesmo não será alterado de forma alguma, salvo por expressa
+          solicitação escrita por parte da CONTRATADA.<br /><br />
+          5.4. O Suporte Técnico fornecido à CONTRATANTE limita-se a
+          esclarecimentos sobre o software, assim sendo, pressupõe-se o mínimo
+          de conhecimento do uso do computador e Internet por parte do
+          usuário/CONTRATANTE, o que inclui o uso do computador e suas funções,
+          o uso do sistema operacional sob o qual o sistema irá trabalhar, e do
+          assunto que este software se propõe a resolver. Pressupõe-se também
+          uma configuração adequada do computador que operará as funcionalidades
+          do software, e o bom estado de funcionamento deste computador, bem
+          como da rede interna e da estabilidade da Internet utilizada pela
+          CONTRATANTE.<br /><br />
+          5.5. A CONTRATADA disponibilizará vídeo aulas para o treinamento
+          relativo ao software DAPIC. Caso a CONTRATANTE necessite de
+          treinamento, à título de consultoria, a mesma deverá solicitar um
+          orçamento à CONTRATADA, a qual informará os valores e condições de
+          pagamento.<br /><br />
+          5.6. A CONTRATADA compromete-se a prestar o suporte técnico necessário
+          de todos os recursos fornecidos pelo Software disponibilizado junto à
+          CONTRATANTE nos termos e condições especificados no presente
+          instrumento. O suporte técnico será disponibilizado de segunda a
+          sexta-feira, das 08h00 às 18h00, incluindo os seguintes recursos
+          adicionais:<br /><br />
+          5.6.1. Vídeo Aulas: A CONTRATADA fornecerá vide aulas explicativas
+          sobre o uso e funcionalidades do software, visando auxiliar a
+          CONTRATANTE no seu pleno aproveitamento.<br /><br />
+          5.6.2. Central de Ajuda: A CONTRATADA disponibilizará uma central de
+          ajuda online, acessível a qualquer momento, contendo documentação,
+          guias de uso e respostas para as principais dúvidas relacionadas ao
+          software.<br /><br />
+          5.7. O suporte técnico contemplado é exclusivo para o DAPIC, não
+          incluindo outros elementos de infraestrutura. Caso a CONTRATADA
+          identifique que a causa do problema não está no DAPIC, informará ao
+          CONTRATANTE e encerrará o atendimento sem nenhum ônus à mesma.<br /><br />
+          5.8. O Suporte Técnico da CONTRATADA garante atendimento somente aos
+          clientes que se encontram em dia com suas mensalidades.<br /><br />
+          5.9. Novas funções, facilidades ou novas funcionalidades sugeridas
+          pelo CONTRATANTE poderão ser incorporadas ao DAPIC a critério
+          exclusivo da CONTRATADA, NÃO CONSTITUINDO QUALQUER OBRIGAÇÃO DESTA
+          NATUREZA POR PARTE DA MESMA. QUANDO ANALISADAS E CLASSIFICADAS COMO
+          VIÁVEIS PELA CONTRATADA, AS SUGESTÕES IMPLEMENTADAS E MELHORIAS DO
+          DAPIC SERÃO DISPONIBILIZADAS EM VERSÕES POSTERIORES EM MOMENTO
+          OPORTUNO, A CRITÉRIO DA CONTRATADA.<br /><br />
+          5.10. Havendo urgência por parte do CONTRATANTE para alguma nova
+          implementação previamente avaliada e aprovada pela CONTRATADA, será
+          cobrado um valor adicional previamente orçado e informado ao
+          CONTRATANTE, estipulando-se a estimativa de entrega para esta nova
+          implementação. A CONTRATANTE DECLARA, DESDE JÁ, ESTAR CIENTE DE QUE
+          SERA DISPONIBILIZADA TAIS IMPLEMENTAÇOES PAGAS A OUTROS CLIENTES.<br /><br />
+          5.11. As implementações pagas pelo CONTRATANTE serão desenvolvidas
+          estritamente conforme a especificação técnica aprovada. Necessidades
+          “obvias” ou ocultas que não estejam claramente descritas na
+          especificação não serão desenvolvidas, estando sujeitas a novos
+          orçamentos e prazos de entrega para sua complementação.<br /><br />
+          5.12. A utilização do software se realizará mediante a utilização de
+          senhas pessoais e intransferíveis.<br /><br />
+          5.13. Todas as solicitações da CONTRATANTE à CONTRATADA se
+          restringirão a questões relacionadas ao sistema mencionado e serão
+          feitas por meio de mensagens eletrônicas no protocolo e atendimento
+          on-line, salvo, na sua impossibilidade, por outro meio qualquer,
+          preservando sempre a sua forma escrita, sob pena de ser considerada
+          inexistente.<br /><br />
+          5.14. Todo o suporte técnico prestado pela CONTRATADA, será feito de
+          maneira remota. Caso seja imprescindível e necessário o deslocamento
+          da CONTRATADA para a prestação pessoal do suporte técnico, a
+          CONTRATANTE arcará com o pagamento das despesas com o aludido
+          deslocamento, cujos valores serão previamente informados pela
+          CONTRATADA.<br /><br />
+          6 - DOS EVENTOS NÃO COBERTOS PELO SUPORTE TÉCNICO DO SOFTWARE
+          IMPLANTADO<br /><br />
+          6.1. A CONTRATADA pode negar suporte técnico ao software se a
+          CONTRATANTE não seguir as instruções fornecidas ou em situações
+          especificadas no presente aditivo.<br /><br />
+          6.2. Não estão abrangidos pelo presente aditivo os seguintes eventos:
+          a - Danos físicos ao equipamento eletrônico da CONTRATANTE; b - uso
+          inadequado do equipamento eletrônico bem como a deterioração dos
+          sistemas de operação da máquina eletrônica da CONTRATANTE decorrente
+          da aquisição de elementos perturbadores (vírus) adquiridos de discos
+          móveis (digitalizados ou não) bem como da Rede Mundial de
+          Computadores.<br /><br />
+          7 – DOS DEVERES DA CONTRATANTE<br /><br />
+          7.1. A CONTRATANTE se compromete a não compartilhar logins e senhas
+          dos usuários contratado no plano escolhido.<br /><br />
+          7.2. A CONTRATANTE se compromete a arcar com o pagamento da
+          remuneração da MENSALIDADE do Software da CONTRATADA nos exatos termos
+          fixados no presente termo de uso.<br /><br />
+          7.3. A CONTRATANTE se responsabiliza por fornecer todos os
+          equipamentos e dispositivos da web e acessos necessários e de acordo
+          com a configuração mínima fornecida pela CONTRATADA, a fim de que esta
+          possa ter condições de realizar ou monitorar perfeitamente a
+          implantação e ou manutenção, local ou remotamente, do Software.<br /><br />
+          7.4. A CONTRATANTE se responsabilizará pelos problemas decorrentes do
+          uso e cadastramentos incorretos de dados no Software.<br /><br />
+          7.5. A CONTRATANTE se obriga, ainda, a: A - Utilizar o software
+          exclusivamente ao fim a que ele se destina, abstendo-se de trafegar e
+          armazenar dados e informações que importem em prejuízo a terceiros;
+          violem a lei, a moral, os bons costumes; a propriedade intelectual;
+          que incorporem vírus ou outros elementos físicos ou eletrônicos que
+          possam danificar ou impedir o uso normal do software; B - Utilizar
+          somente equipamentos hábeis e capazes de atender às exigências mínimas
+          de configuração necessárias à utilização do software, bem como pelo
+          manuseio correto do programa; C - Pagar pontualmente os valores
+          relativos à Licença de Uso, sob pena de incidência de encargos
+          moratórios, suspensão da licença de uso e rescisão contratual; D - Não
+          acessar, desconstituir, alterar, modificar, seccionar ou de qualquer
+          forma adulterar os códigos fonte do software, nem copiar e/ou
+          transferir o software cuja licença de uso lhe é cedida; E - Guardar em
+          local seguro, inviabilizando a não divulgação ou, de qualquer modo,
+          acesso aos elementos de autenticação do usuário do software, seja pelo
+          “login” ou pela “senha”; F - Manter seu computador livre e desinfetado
+          de vírus ou similares, propiciando assim maior segurança ao tráfego e
+          armazenamento dos dados/informações; G - Manter os seus dados
+          cadastrais devidamente atualizados, sob pena de, em não o fazendo,
+          considerarem-se válidos todos os avisos e notificações enviados para
+          os endereços constantes do referido cadastro; H - Autorizar que a
+          CONTRATADA proceda às necessárias modificações, reparações e
+          implementações de novos recursos ao software, caso este apresente
+          alguma anomalia ou irregularidade, de modo a torná-lo mais seguro,
+          eficiente e eficaz, mesmo que acarrete sua indisponibilidade
+          temporária; I – Reconhecer, destaca-se mais uma vez, que todas as
+          modificações, melhorias e correções efetuadas no software, mesmo que
+          informadas, solicitadas, e eventualmente pagas pela CONTRATANTE, ficam
+          incorporadas ao software e sujeitas aos termos desta LICENÇA DE USO DO
+          SOFTWARE, podendo inclusive serem disponibilizadas pela CONTRATADA a
+          outras CONTRATANTES que utilizem o software, assim como a CONTRATANTE
+          pode eventualmente receber melhorias de funcionamento, correções e
+          novos recursos no software que utiliza; J - Eximir a CONTRATADA de
+          qualquer responsabilidade pelo uso indevido do software, em razão da
+          indevida guarda dos elementos de autenticação (logins e senhas de
+          acesso); K - Eximir a CONTRATADA de qualquer responsabilidade pelo
+          fornecimento de informações oficiais, expressamente, exigidas pelo
+          Poder Público, na forma da lei, ainda que importe quebra do sigilo; L
+          - Eximir-se de, por si ou por terceiros de traduzir, fazer engenharia
+          reversa, descompilar, copiar imagens, códigos ou quaisquer partes do
+          software para utilização fora dele; M - Modificar o software ou
+          mesclar todas ou qualquer de suas partes com outro programa; N -
+          Remover ou alterar qualquer aviso de copyright, marca registrada, ou
+          outro aviso de direitos de propriedade colocados no software ou em
+          parte do mesmo. 7.6. A CONTRATANTE AUTORIZA, ATRAVÉS DO PRESENTE
+          TERMO, A UTILIZAÇÃO DE SUA IMAGEM, LOGOMARCA NO SITE DA CONTRATADA,
+          PARA A PUBLICIDADE DOS SERVIÇOS PRESTADOS POR ESTA, RESSALVANDO-SE,
+          QUE REFERIDA UTILIZAÇÃO DA LOGOMARCA NÃO GERARÁ QUALQUER DIREITO
+          PECUNIÁRIO OU INDENIZATÓRIO PARA A CONTRATANTE.<br /><br />
+          8 – ISENÇÕES DE RESPONSABILIDADE<br /><br />
+          8.1. A CONTRATANTE CONCORDA E ACEITA EXPRESSAMENTE QUE, OCORRENDO
+          QUALQUER DAS HIPÓTESES ABAIXO DESCRITAS, A CONTRATADA NÃO SE
+          RESPONSABILIZA POR QUALQUER DANO OU PREJUÍZO SOFRIDO PELA CONTRATANTE:
+          A - Mau uso, ou uso incorreto do software, ou de modo diverso daquele
+          indicado no Manual do Usuário; B - Existência de “vírus” no
+          equipamento da CONTRATANTE, o qual poderá danificar, distorcer,
+          alterar ou divulgar as informações e/ou dados sigilosos gerenciados
+          pelo software; C - Incompatibilidade de “hardware” e “softwares” da
+          CONTRATANTE, bem como pela inexistência e/ou erro de configuração no
+          equipamento desta que deverá, anteriormente à aceitação deste
+          instrumento, verificar se dispõe de todos os requisitos necessários à
+          utilização do software, cuja licença de uso está sendo concedida pela
+          CONTRATADA; D - Ocorrência de caso fortuito ou força maior, assim
+          compreendidos o fato natural ou humano que, de forma imprevisível e
+          inesperada, possa(m) acarretar problemas ao funcionamento do software,
+          num futuro próximo ou remoto, já que o desenvolvimento tecnológico é
+          extremamente dinâmico; E - Contradição, omissões ou obscuridades das
+          informações que o software irá gerenciar, uma vez que toda a inserção
+          de informações será realizada exclusivamente pela CONTRATANTE; F -
+          Perda das senhas de acesso pela CONTRATANTE, especial, mas não
+          exclusivamente, quando a senha perdida for a criptografada, cuja
+          recuperação pela CONTRATADA é impossível.<br /><br />
+          9 – LIMITAÇÃO DA RESPONSABILIDADE<br /><br />
+          9.1. A CONTRATANTE declara, reconhece e aceita que: A - O estado da
+          técnica não permite a elaboração de programas de computador totalmente
+          isentos de vícios ou defeitos e que, assim sendo, a CONTRATADA não
+          pode garantir que o software operará ininterruptamente ou livre de
+          vícios ou defeitos; B - O software não foi desenvolvido sob encomenda
+          da CONTRATANTE, mas para uso genérico, razão pela qual a CONTRATADA
+          não pode garantir que o bem atenderá às necessidades específicas da
+          CONTRATANTE; C - A CONTRATADA ISENTA-SE EXPRESSAMENTE DE QUAISQUER
+          RESPONSABILIDADES E INDENIZAÇÕES, PERDAS E DANOS, LUCROS CESSANTES,
+          PREJUÍZOS DE QUAISQUER ESPÉCIES, OU SOB QUAISQUER TÍTULOS, PERDAS DE
+          NEGÓCIOS, PERDA OU EXTRAVIO DE DADOS, DEFEITOS DE COMPUTADOR,
+          EQUIPAMENTOS OU PERIFÉRICOS, OU QUAISQUER OUTROS DANOS DIRETOS,
+          INDIRETOS, ACIDENTAIS, OU ESPECIAIS, DECORRENTES DIRETA OU
+          INDIRETAMENTE DA UTILIZAÇÃO DO SOFTWARE, CAUSADOS À CONTRATANTE OU A
+          TERCEIROS.<br /><br />
+          10 – DISPOSIÇÕES GERAIS<br /><br />
+          10.1. Uma vez aprovada e autorizada a implantação do programa pelo
+          CONTRATANTE, não será permitida nenhuma mudança, exceto quando não
+          alterar a estrutura do programa original.<br /><br />
+          10.2. Havendo disponibilidade técnica, as partes consentem,
+          expressamente, que todas as comunicações telefônicas e eletrônicas que
+          existirem entre as mesmas, durante o prazo de validade técnica do
+          Software acima indicado, sejam gravadas.<br /><br />
+          10.3. Obrigam-se mutuamente, CONTRATANTE e CONTRATADA, a respeitar o
+          direito de propriedade e de confidencialidade de informações
+          acessadas, bem como o de não transferir a terceiros, no todo ou em
+          parte, salvo prévia autorização uma da outra.<br /><br />
+          10.4. A CONTRATADA se compromete a manter em sigilo todas as
+          informações do CONTRATANTE a que tiver acesso, em decorrência da
+          prestação dos serviços conforme este termo de uso. <br /><br />10.5.
+          Todas as informações fornecidas pelo CONTRATANTE ou pela CONTRATADA,
+          com a classificação por escrito de “CONFIDENCIAL”, serão mutuamente
+          como tais considerados, que se comprometerá diretamente ou através de
+          seus dirigentes e empregados, a não divulgar ou transmitir a
+          terceiros.<br /><br />
+          10.6. Todos os estudos executados, projetos, propostas e instruções
+          emitidas pela CONTRATADA, para cumprimento do serviço, não deverão
+          ser, no todo ou em parte, utilizados, reproduzidos ou comunicados a
+          terceiros, sem expressa autorização.<br /><br />
+          10.7. O CONTRATANTE não poderá omitir, negar ou imputar a outrem, a
+          autoria pelo desenvolvimento intelectual do trabalho da CONTRATADA ou
+          seus parceiros, quando divulgá-lo a terceiros.<br /><br />
+          10.8. A CONTRATADA não tem qualquer responsabilidade pelo conteúdo
+          veiculado através de seu SOFTWARE, cabendo ao CONTRATANTE a exclusiva
+          responsabilidade pelo material veiculado, inclusive sobre a sua
+          confidencialidade.<br /><br />
+          10.9. A CONTRATADA pode carregar automaticamente informações sobre
+          desempenho e uso do SOFTWARE para avaliar tendências de mercado e a
+          correta aplicação da modalidade licenciada. Essas informações serão
+          consideradas confidenciais e não serão publicadas.<br /><br />
+          11 – DA RESCISÃO/CANCELAMENTO<br /><br />
+          11.1. Os serviços contratados poderão ser rescindidos, por qualquer
+          uma das partes, estando em dia com suas obrigações contratuais. A
+          solicitação pelo CONTRATANTE deverá ser feita através do preenchimento
+          do formulário disponibilizado no endereço cancelamento.webpic.com.br,
+          com antecedência de 30 dias. <br /><br />11.2. A simples interrupção
+          de uso do software pelo CONTRATANTE não gera o automático cancelamento
+          ou a rescisão automática deste instrumento contratual. <br /><br />
+          11.3. O CONTRATANTE deverá efetuar o pagamento das faturas já vencidas
+          e a rescisão somente será considerada efetiva após todas as obrigações
+          terem sido pagas. <br /><br />
+          11.4. A rescisão/cancelamento será concluída na data em que se
+          encerrar o ciclo do último pagamento da mensalidade em vigor. Dentro
+          desse período, o CONTRATANTE poderá utilizar livremente o software,
+          que permanecerá disponível até o final do ciclo de pagamento.
+          <br /><br />
+          11.5. Em caso de rescisão contratual, a CONTRATADA poderá solicitar o
+          banco de dados, por meio de protocolo. Após, decorridos 30 (trinta)
+          dias do encerramento do contrato, os dados serão permanentemente
+          eliminados de forma irrecuperável. <br /><br />
+          11.6. A CONTRATADA poderá interromper imediatamente a prestação do
+          Serviço, objeto do presente Termo, caso haja indícios de que o
+          CONTRATANTE esteja utilizando o Serviço para incitar ou cometer
+          qualquer atitude ilegal ou que conduza a comportamento ilegal.
+          <br /><br />
+          11.7. Caso o CONTRATANTE fique 03 (três) meses consecutivos sem
+          efetuar o pagamento da mensalidade do sistema DAPIC, a CONTRATADA
+          reserva-se o direito de cancelar/rescindir o contrato por
+          inadimplência, mediante aviso prévio ao CONTRATANTE. <br /><br />
+          11.8. O cancelamento do contrato por inadimplência acarretará a
+          exclusão imediata dos dados da CONTRATANTE do banco de dados do
+          sistema DAPIC, após decorridos 90 (noventa) dias, do inadimplemento. A
+          CONTRATADA não terá nenhuma responsabilidade pela recuperação ou
+          retenção dos dados após o cancelamento/rescisão. <br /><br />
+          11.9. Caso a CONTRATANTE tenha interesse em retomar o uso do sistema
+          DAPIC após o cancelamento/rescisão, devido à inadimplência, será
+          necessário que a CONTRATANTE entre em contato com a CONTRATADA para
+          antes, sanar os valores pendentes. A CONTRATADA não garante a
+          recuperação dos dados armazenados no sistema anteriormente. A
+          recontratação terá os mesmos efeitos práticos de uma nova assinatura e
+          será disponibilizada ao CONTRATANTE uma nova conta com banco de dados
+          novo para início das operações.<br /><br />
+          12 – LEI GERAL DE PROTEÇÃO DE DADOS <br /><br />
+          12.1. As partes declaram e se comprometem sob as penas da lei, que
+          obedecem fielmente, desde já, a Lei Geral de Proteção de Dados nº
+          13.709/2018, que entrou em vigor em agosto de 2020, tendo como
+          propósito fornecer as diretrizes de como os dados pessoais e
+          identificadores de todos os cidadãos devem ser coletados, tratados e
+          descartados. Comprometem- se a guarda e proteção dos dados coletados
+          seja fisicamente ou digitalmente, bem como, a utilização apenas para a
+          atividade fim informada. <br /><br />
+          12.2. Dados são aqueles que isoladamente ou conjuntamente identifiquem
+          a pessoa física, jurídica, seja ela pública ou privada e que tenham
+          sido coletados em território nacional. Protegerão os direitos
+          fundamentais inerentes a privacidade à liberdade de expressão, de
+          informação, de comunicação e de opinião; à inviolabilidade da
+          intimidade, da honra e da imagem; ao desenvolvimento econômico e
+          tecnológico e a inovação; à livre iniciativa, livre concorrência e
+          defesa do consumidor e aos direitos humanos liberdade e dignidade das
+          pessoas. <br /><br />
+          12.3. O controlador é responsável por determinar as finalidades e os
+          meios de tratamento dos dados pessoais, ou seja, ele decide por que os
+          dados serão coletados, como serão usados, compartilhados, armazenados
+          e descartados. O controlador tem a responsabilidade de garantir que
+          todo o tratamento de dados pessoais esteja em conformidade com as
+          disposições da LGPD. <br /><br />
+          12.4. A CONTRATANTE como controlador dos dados comprometesse a tomar
+          decisões referentes ao tratamento de dados pessoais, sendo totalmente
+          responsável pelo tratamento dos dados coletados e tratados.
+          <br /><br />
+          12.5. A CONTRATANTE compromete-se a fiscalizar o cumprimento da
+          legislação seja por seus funcionários, sócios e ou terceiros, sendo
+          que cada um responderá na medida de suas responsabilidades, caso não
+          cumpram com o dever de guarda das informações, conforme estabelecidas
+          na legislação. <br /><br />
+          12.6. Deve garantir ainda, que seus funcionários estejam devidamente
+          treinados e conscientizados sobre a importância da proteção de dados
+          pessoais e das obrigações decorrentes da LGPD. <br /><br />
+          12.7. A CONTRATANTE compromete-se a colher os dados de seus CLIENTES,
+          observando a proporção, pertinência, autorização e limitando - a
+          finalidade específica e quando aplicável, deverá realizar avaliações
+          de impacto à privacidade, a fim de identificar e mitigar possíveis
+          riscos relacionados ao tratamento de dados pessoais. <br /><br />
+          12.8. A CONTRATANTE deverá ainda, permitir o livre acesso as
+          informações dos usuários individualmente, e caso seja solicitada,
+          retirar ou retificar qualquer informação, conforme e da forma prevista
+          em lei. Não usarão os dados coletados para fins diferentes do
+          informado, discriminatórios, ilícitos ou abusivos, sob pena de arcarem
+          com as medidas judiciais cabíveis. <br /><br />
+          12.9. A CONTRATANTE bem como a CONTRATADA comprometem-se em casos de
+          ataques cibernéticos ou vazamentos de dados coletados, a comunicarem
+          imediatamente a outra parte, à Autoridade Nacional de Proteção de
+          Dados (ANPD) e ao titular da ocorrência, o incidente de segurança que
+          possa acarretar risco ou dano relevante ao titular, nos termos do
+          artigo 48 da LGPD- Lei Geral de Proteção de Dados e seus incisos.
+          <br /><br />
+          12.10. Todos os responsáveis pelos tratamentos de dados coletados,
+          responderão em razão das infrações cometidas nos limites de suas
+          responsabilidades às normas previstas na referida Legislação, ficando
+          sujeitos ainda às sanções administrativas aplicáveis descritas no
+          artigo 52 da LGPD - Lei Geral de Proteção de Dados. <br /><br />
+          12.11. A CONTRATANTE compromete-se a apenas utilizar os dados
+          coletados de acordo com a legislação e após expressa autorização do
+          titular destes. <br /><br />
+          12.12 A CONTRATADA informa ao CONTRATANTE que o tratamento dos dados
+          pessoais do CONTRATANTE será realizado com a finalidade de cumprimento
+          do presente termo de uso, podendo ser compartilhado com outras
+          empresas para atingir outras finalidades acessórias ao objeto do
+          presente contrato, mas que jamais estarão desalinhadas com a justa
+          expectativa do titular dos dados. <br /><br />
+          12.13. A aceitação deste Termo de Uso manifesta a vontade inequívoca
+          da CONTRATANTE no contrato celebrado por meio eletrônico e na
+          concordância com as condições necessárias para utilização do serviço.
+          A não aceitação ou violação dos Termos de Uso resultarão na NÃO
+          CONTRATAÇÃO do plano escolhido. <br /><br />
+          12.14. A CONTRATADA tem o direito de revisar o Termo de Uso a qualquer
+          momento, sendo que o uso continuado do serviço por parte da
+          CONTRATANTE será considerado como aceitação de tais revisões. A
+          CONTRATANTE poderá consultar a versão mais atual do Termo de Uso a
+          qualquer momento pelo endereço: www.webpic.com.br. Se você tiver uma
+          assinatura ativa do DAPIC, informaremos sobre as atualizações quando
+          ocorrerem. <br /><br />
+          12.15 A CONTRATADA nomeou o Dr. Wilmer Martinez portador da OAB/SP
+          415.504 como Data Protection Officer (“DPO”). O CONTRATANTE pode
+          entrar em contato através do e-mail Privacidade@webpic.com.br para
+          esclarecimentos e dúvidas.<br /><br />
+          13 – INDISPONIBILIDADES POR ATAQUES CIBERNÉTICOS E EVENTOS DE FORÇA
+          MAIOR <br /><br />
+          13.1. A CONTRATADA assume o compromisso de manter os serviços
+          disponíveis para o CONTRATADO, adotando e garantindo todas as medidas
+          legitimas para garantir sua estabilidade. <br /><br />
+          13.2. As interrupções quando necessário, será realizada de forma
+          programada pela CONTRATADA e durante os períodos de menor tráfego, a
+          fim de minimizar possíveis impactos. <br /><br />
+          13.3. No entanto, nenhum sistema é completamente imune a ataques
+          cibernéticos ou eventos de força maior, tais como ações de governo,
+          desastres naturais, greves, falhas ou atrasos do fornecedor do serviço
+          de Internet, entre outros. <br /><br />
+          13.4. A indisponibilidade, será considerada quando o serviço de
+          fornecido não está acessível ou não está funcionando corretamente,
+          resultando na impossibilidade de acesso ou na interrupção das
+          funcionalidades e recursos. <br /><br />
+          13.5. Por outro lado, a instabilidade refere-se a uma situação em que
+          o sistema apresenta oscilações, flutuações ou comportamentos
+          inconsistentes, mas sem chegar à indisponibilidade total. <br /><br />
+          13.6. Diante disso, resta claro a isenção de responsabilidade da
+          CONTRATADA nos casos de instabilidade ou indisponibilidade temporária
+          dos serviços causados por ataques cibernéticos ou eventos de força
+          maior. Tais incidentes não afetara o “uptime” previsto bem como não
+          concede ao CONTRATANTE o direito de cancelamento. <br /><br />
+          13.7. Vale ressaltar neste ponto que a CONTRATADA pode interromper o
+          serviço sem aviso prévio quando isto for exigido por uma autoridade
+          pública.<br /><br />
+          14 – DA ASSINATURA DIGITAL<br /><br />
+          14.1. O CONTRATANTE e CONTRATADO, reconhecem que este Termo tem plena
+          validade em formato eletrônico, sendo equiparado a documento físico
+          para todos os efeitos legais, reconhecendo e declarando os signatários
+          que a assinatura/aceite deste Termo em meio eletrônico é apta a
+          comprovar autenticidade, autoria, integridade e validade jurídica do
+          instrumento ora firmado, e conferirlhe pleno efeito legal, como se
+          documento físico fosse.<br /><br />
+          15 – DO FORO<br /><br />
+          15.1. A fim de dirimir quaisquer questões oriundas do presente Termo,
+          as partes elegem o foro da Comarca de São José do Rio Preto/SP.
+        </p>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              loading="lazy"
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-7 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".companies-swiper", {
+        slidesPerView: 4, // desktop
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2, // mobile
+          },
+          768: {
+            slidesPerView: 4, // tablet e acima
+          },
+        },
+      });
+      const commentsSwiper = new Swiper(".comments-swiper", {
+        slidesPerView: 1, // desktop
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".seta-next",
+          prevEl: ".seta-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2, // tablet e acima
+          },
+          1200: {
+            slidesPerView: 3, // tablet e acima
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

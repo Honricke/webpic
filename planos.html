@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Planos e Preços</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container p-4 px-mg-0 text-center">
+        <h1 class="fs-3">
+          Planos e Preços <span class="text-roxo">Dapic</span>
+        </h1>
+        <p class="fs-7 fs-mg-6">
+          Escolha o plano ideal para a sua confecção e transforme a gestão do
+          seu negócios! Afinal, aqui tem tecnologia em cada ponto da sua
+          confecção.
+        </p>
+      </section>
+      <section
+        class="container p-4 px-mg-0 rounded-4 bg-secondary shadow"
+        style="max-width: 400px"
+      >
+        <p class="fs-7 fs-mg-6 text-center">Escolha o período a assinatura</p>
+        <div class="d-flex gap-3 justify-content-center">
+          <button
+            id="mensal-button"
+            class="main-button btn bg-roxo px-5"
+            onclick="changePeriod(false)"
+          >
+            Mensal
+          </button>
+          <button
+            id="anual-button"
+            class="neg-button btn px-5 text-primary"
+            onclick="changePeriod(true)"
+          >
+            Anual
+          </button>
+        </div>
+      </section>
+      <section class="container-fluid p-0 overflow-hidden">
+        <div class="container p-4 px-mg-0">
+          <div class="swiper companies-swiper overflow-visible">
+            <div
+              class="swiper-wrapper flex-md-wrap gap-md-3 justify-content-md-center"
+            >
+              <div class="swiper-slide w-auto">
+                <div class="bg-secondary rounded-4 planos-card p-4">
+                  <h1 class="text-center fw-bold" style="font-size: 1.5rem">
+                    Light
+                  </h1>
+
+                  <h1 class="fs-6 text-center fw-normal">
+                    <span class="align-top d-inline-block mt-2">R$</span>
+                    <span style="font-size: 3rem" class="fw-bold preco-mensal"
+                      >399</span
+                    >
+                    <span
+                      style="font-size: 3rem"
+                      class="fw-bold preco-anual d-none"
+                      >3.990</span
+                    >
+                    <span class="preco-mensal">/mês</span>
+                    <span class="preco-anual d-none">/ano</span>
+                  </h1>
+
+                  <!--Apenas para valor anual-->
+                  <p
+                    class="fs-7 text-center d-none preco-anual"
+                    style="font-weight: 500; line-height: 1.5rem"
+                  >
+                    Valor equivalente a R$ 333,00 por mês.<br />
+                    <span class="text-roxo">economize R$ 798,00 por ano</span>
+                  </p>
+
+                  <button class="main-button btn d-block mx-auto">
+                    Fale com um consultor
+                  </button>
+                  <ul class="d-block bg-light rounded-4 p-2 list-unstyled mt-3">
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Suporte on-line</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Múltiplos estoques</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Curva ABC (produtos e clientes)</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">
+                        Controle de ficha técnica e previsão de consumo
+                      </p>
+                    </li>
+                    <li class="d-flex m-1">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Banco de dados ilimitado</p>
+                    </li>
+                  </ul>
+                  <ul class="list-unstyled">
+                    <li>1 CNPJ incluso</li>
+                    <li>1 Usuário</li>
+                    <li>
+                      <i
+                        class="bi bi-x text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Integraçoes
+                    </li>
+                    <li>
+                      <i
+                        class="bi bi-x text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Relatórios B.I (Business Intelligence)
+                    </li>
+                    <li>Videoaulas de treinamento gravadas</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="bg-secondary rounded-4 planos-card p-4">
+                  <h1 class="text-center fw-bold" style="font-size: 1.5rem">
+                    Starter
+                  </h1>
+                  <h1 class="fs-6 text-center fw-normal">
+                    <span class="align-top d-inline-block mt-2">R$</span>
+                    <span style="font-size: 3rem" class="fw-bold preco-mensal"
+                      >499</span
+                    >
+                    <span
+                      style="font-size: 3rem"
+                      class="fw-bold preco-anual d-none"
+                      >4.990</span
+                    >
+                    <span class="preco-mensal">/mês</span>
+                    <span class="preco-anual d-none">/ano</span>
+                  </h1>
+
+                  <!--Apenas para valor anual-->
+                  <p
+                    class="fs-7 text-center d-none preco-anual"
+                    style="font-weight: 500; line-height: 1.5rem"
+                  >
+                    Valor equivalente a R$ 316,00 por mês.<br />
+                    <span class="text-roxo">economize R$ 998,00 por ano</span>
+                  </p>
+                  <button class="main-button btn d-block mx-auto">
+                    Fale com um consultor
+                  </button>
+                  <ul class="d-block bg-light rounded-4 p-2 list-unstyled mt-3">
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Suporte on-line</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Múltiplos estoques</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Curva ABC (produtos e clientes)</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">
+                        Controle de ficha técnica e previsão de consumo
+                      </p>
+                    </li>
+                    <li class="d-flex m-1">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Banco de dados ilimitado</p>
+                    </li>
+                  </ul>
+                  <ul class="list-unstyled">
+                    <li>1 CNPJ incluso</li>
+                    <li>5 Usuários</li>
+                    <li>
+                      <i
+                        class="bi bi-x text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Integraçoes
+                    </li>
+                    <li>
+                      <i
+                        class="bi bi-x text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Relatórios B.I (Business Intelligence)
+                    </li>
+                    <li>Videoaulas de treinamento gravadas</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div
+                  class="bg-secondary rounded-4 planos-card p-4 border border-roxo border-2 position-relative"
+                >
+                  <div
+                    class="position-absolute bg-roxo text-light px-3 py-1 rounded-5"
+                    style="
+                      top: 0px;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      white-space: nowrap;
+                    "
+                  >
+                    Melhor custo-benefício
+                  </div>
+                  <h1 class="text-center fw-bold" style="font-size: 1.5rem">
+                    Premium
+                  </h1>
+                  <h1 class="fs-6 text-center fw-normal">
+                    <span class="align-top d-inline-block mt-2">R$</span>
+                    <span style="font-size: 3rem" class="fw-bold preco-mensal"
+                      >699</span
+                    >
+                    <span
+                      style="font-size: 3rem"
+                      class="fw-bold preco-anual d-none"
+                      >6.990</span
+                    >
+                    <span class="preco-mensal">/mês</span>
+                    <span class="preco-anual d-none">/ano</span>
+                  </h1>
+
+                  <!--Apenas para valor anual-->
+                  <p
+                    class="fs-7 text-center d-none preco-anual"
+                    style="font-weight: 500; line-height: 1.5rem"
+                  >
+                    Valor equivalente a R$ 581,00 por mês.<br />
+                    <span class="text-roxo">economize R$ 1.398,00 por ano</span>
+                  </p>
+                  <button
+                    class="main-button bg-roxo btn d-block mx-auto text-nowrap"
+                  >
+                    Fale com um consultor
+                  </button>
+                  <ul class="d-block bg-light rounded-4 p-2 list-unstyled mt-3">
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Suporte on-line</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Múltiplos estoques</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Curva ABC (produtos e clientes)</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">
+                        Controle de ficha técnica e previsão de consumo
+                      </p>
+                    </li>
+                    <li class="d-flex m-1">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Banco de dados ilimitado</p>
+                    </li>
+                  </ul>
+                  <ul class="list-unstyled">
+                    <li>1 CNPJ incluso</li>
+                    <li>7 Usuário</li>
+                    <li>1 Integração com outra plataforma</li>
+                    <li>
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Relatórios B.I (Business Intelligence)
+                    </li>
+                    <li>Masterclass</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide w-auto">
+                <div class="bg-secondary rounded-4 planos-card p-4 planos-card">
+                  <h1 class="text-center fw-bold" style="font-size: 1.5rem">
+                    Advanced
+                  </h1>
+                  <h1 class="fs-6 text-center fw-normal">
+                    <span class="align-top d-inline-block mt-2">R$</span>
+                    <span style="font-size: 3rem" class="fw-bold preco-mensal"
+                      >1.099</span
+                    >
+                    <span
+                      style="font-size: 3rem"
+                      class="fw-bold preco-anual d-none"
+                      >10.990</span
+                    >
+                    <span class="preco-mensal">/mês</span>
+                    <span class="preco-anual d-none">/ano</span>
+                  </h1>
+
+                  <!--Apenas para valor anual-->
+                  <p
+                    class="fs-7 text-center d-none preco-anual"
+                    style="font-weight: 500; line-height: 1.5rem"
+                  >
+                    Valor equivalente a R$ 916,00 por mês.<br />
+                    <span class="text-roxo">economize R$ 2.198,00 por ano</span>
+                  </p>
+                  <button class="main-button btn d-block mx-auto">
+                    Fale com um consultor
+                  </button>
+                  <ul class="d-block bg-light rounded-4 p-2 list-unstyled mt-3">
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Suporte on-line</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Múltiplos estoques</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Curva ABC (produtos e clientes)</p>
+                    </li>
+                    <li class="d-flex my-2">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">
+                        Controle de ficha técnica e previsão de consumo
+                      </p>
+                    </li>
+                    <li class="d-flex m-1">
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i>
+                      <p class="fs-6 m-0">Banco de dados ilimitado</p>
+                    </li>
+                  </ul>
+                  <ul class="list-unstyled">
+                    <li>2 CNPJ incluso</li>
+                    <li>10 Usuário</li>
+                    <li>1 Integração com outra plataforma</li>
+                    <li>
+                      <i
+                        class="bi bi-check-lg text-roxo fw-bolder align-middle me-1"
+                      ></i
+                      >Relatórios B.I (Business Intelligence)
+                    </li>
+                    <li>2 horas de consultoria + Masterclass</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 mx-auto d-none d-md-block" style="max-width: 900px">
+            <img
+              class="img-fluid"
+              src="./assets/img/commom/planos/frase 1@2x.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Sessões apenas Desktop-->
+      <section class="container-fluid p-0 bg-secondary d-none d-md-block">
+        <div class="container p-4 text-center">
+          <h1 class="fs-3">Quer personalizar o seu plano?</h1>
+          <p class="fs-7 mt-2">
+            Personalize seu plano Dapic conforme sua necessidade! Adicione
+            usuários, representantes, CNPJs, integração com BI, consultoria de
+            implantação e etiquetas personalizadas. Fale com um de nossos
+            consultores!
+          </p>
+          <div class="row text-start">
+            <div class="col d-flex flex-column gap-3">
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Usuário adicional</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 35</span>
+                  <br />por usuário por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Usuário representante</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 35</span>
+                  <br />por usuário por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">CNPJ adicional</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 399</span>
+                  <br />por CNPJ por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Integração adicional</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 90</span>
+                  <br />por integração por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Integração com Bling</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 90</span>
+                  <br />por integração por mês
+                </p>
+              </div>
+            </div>
+            <div class="col d-flex flex-column gap-3">
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">API</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 90</span>
+                  <br />por API por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Módulo de B.I</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 120</span>
+                  <br />por mês
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Consultoria remota</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 200</span>
+                  <br />por hora
+                </p>
+              </div>
+              <div
+                class="bg-light shadow rounded-5 gap-5 d-flex justify-content-between align-items-center px-4 py-3"
+              >
+                <p class="m-0 fs-6">Etiqueta personalizada</p>
+                <p class="text-end fs-7 m-0" style="line-height: 0.9rem">
+                  <span class="text-roxo fw-bold fs-6">R$ 35</span>
+                  <br />por etiqueta
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="btn main-button mt-4">Fale com um consultor</button>
+        </div>
+      </section>
+      <section class="container-fluid bg-light d-none d-md-block">
+        <div class="container p-4 text-center position-relative">
+          <h1 class="fs-3">
+            Quem usa, recomenda: veja o que dizem sobre o Dapic
+          </h1>
+          <p class="fs-6">
+            Veja como o Dapic transforma a gestão de quem vive o dia a dia das
+            confecções.
+          </p>
+          <div
+            class="swiper bg-light shadow rounded-4 comments-swiper text-start"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="px-3 px-md-5 py-4 text-center">
+                  <p class="fs-7 fs-md-6 text-roxo">
+                    Pedro <span class="text-text-color">|</span>
+                    <span class="fw-bold text-text-color">Peixote Kids</span>
+                  </p>
+                  <div class="mx-auto" style="max-width: 600px">
+                    <video
+                      class="bg-primary img-fluid"
+                      preload="none"
+                      poster="./assets/img/posters/videoframe_0.webp"
+                      controls
+                    >
+                      <source
+                        src="./assets/videos/1321208-uhd_3840_2160_30fps.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center gap-5 mt-4 justify-content-md-between px-md-4 position-md-absolute top-50 w-100"
+            style="z-index: 1000"
+          >
+            <img
+              class="seta-prev me-3 ms-md-3 me-md-0"
+              src="./assets/img/icons/Seta.png"
+              style="transform: rotate(180deg)"
+              alt=""
+            />
+            <img
+              class="seta-next me-md-5 pe-md-3"
+              src="./assets/img/icons/Seta.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Recursos do Sistema</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="#"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-8 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const changePeriod = (anual) => {
+        const mensalBtn = document.querySelector("#mensal-button");
+        const anualBtn = document.querySelector("#anual-button");
+        const mensalChanges = document.querySelectorAll(".preco-mensal");
+        const anualChanges = document.querySelectorAll(".preco-anual");
+
+        if (anual) {
+          anualBtn.className = "main-button btn bg-roxo px-5";
+          mensalBtn.className = "neg-button btn text-primary px-5";
+
+          anualChanges.forEach((el) => {
+            el.classList.remove("d-none");
+          });
+
+          mensalChanges.forEach((el) => {
+            el.classList.add("d-none");
+          });
+        } else if (!anual) {
+          mensalBtn.className = "main-button btn bg-roxo px-5";
+          anualBtn.className = "neg-button btn text-primary px-5";
+
+          mensalChanges.forEach((el) => {
+            el.classList.remove("d-none");
+          });
+
+          anualChanges.forEach((el) => {
+            el.classList.add("d-none");
+          });
+        }
+      };
+
+      const isDesktop = window.innerWidth <= 768;
+
+      if (isDesktop) {
+        const swiper = new Swiper(".companies-swiper", {
+          slidesPerView: "auto", // desktop
+          spaceBetween: 20,
+          loop: false,
+        });
+      }
+      const commentsSwiper = new Swiper(".comments-swiper", {
+        slidesPerView: 1, // desktop
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".seta-next",
+          prevEl: ".seta-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1, // tablet e acima
+          },
+          1200: {
+            slidesPerView: 1, // tablet e acima
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

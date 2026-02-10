@@ -1,0 +1,12 @@
+$custom-colors: (
+    "text-color": $text-color,
+    "light-blue": $light-blue,
+    "roxo": $roxo,
+    "dark-blue": $dark-blue,
+    "boder": $border
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+

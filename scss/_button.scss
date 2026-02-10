@@ -1,0 +1,50 @@
+//Botões Globais
+.base-button {
+  font-weight: "bold";
+  border-radius: 30px;
+  font-size: $h5-font-size;
+  padding: ($spacer) ($spacer * 1.5);
+  line-height: 1.2rem;
+}
+
+.main-button {
+  @extend .base-button;
+  color: #fff;
+  background-color: $primary;
+  &:hover {
+    color: #fff;
+    background-color: lighten($primary, 10%);
+  }
+}
+
+.neg-button {
+  @extend .base-button;
+  color: $text-color;
+  background-color: $secondary;
+  border: 2px solid $primary;
+  &:hover {
+    color: $text-color;
+    background-color: darken($secondary, 10%);
+    border: 2px solid $primary;
+  }
+}
+
+.light-button {
+  @extend .base-button;
+  color: $primary;
+  font-weight: 500;
+  background-color: $light;
+  border: 2px solid $primary;
+  &:hover {
+    color: $primary;
+    background-color: darken($light, 10%);
+    border: 2px solid $primary;
+  }
+}
+
+@media (min-width: 768px) {
+  .base-button {
+    font-size: $h6-font-size;
+    padding: 7px 20px;
+  }
+}

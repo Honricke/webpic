@@ -1,0 +1,119 @@
+@import "./abstracts/variables";
+
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "./abstracts/map-amends";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import "./global";
+@import "./header";
+@import "./button";
+
+//index.html
+.main-section {
+  background-image: url("../assets/img/backgrounds/img-inicio@2x.webp");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.comment-card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  .comment-prof-img {
+    clip-path: circle();
+    // aspect-ratio: 1 / 1;
+  }
+}
+
+.img-company-item {
+  max-width: min(45%, 150px);
+}
+
+//integracoes.html
+.img-container {
+  max-width: 150px;
+}
+
+//sobre.html
+.main-sobre-section {
+  background-image: url("../assets/img/backgrounds/img-sobre-nós@2x.webp");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  transition: transform 0.3s ease;
+}
+
+//planos.html
+.planos-card {
+  width: 300px;
+  height: 700px;
+}
+
+.sobre-1 {
+  background-image: url(../assets/img/commom/sobre/sobre-nós-1.webp);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.sobre-2 {
+  background-image: url(../assets/img/commom/sobre/sobre-nós-2.webp);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.bi-check-lg::before,
+.bi-x::before {
+  font-weight: 900 !important;
+}
+
+.form-check{
+  display: flex;
+  align-items: center;
+}
+
+.check{
+  width: 28px;
+  height: 28px;
+
+  border: solid 1px $border;
+}
+
+.border-bottom{
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $border;
+
+  box-shadow: none !important;
+}
+
+@media (min-width: 768px) {
+  .img-company-item {
+    max-width: auto;
+  }
+  .img-container {
+    max-width: 225px;
+  }
+  .planos-card {
+    width: 260px;
+    height: 775px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .planos-card {
+    width: 300px;
+    height: 700px;
+  }
+}
