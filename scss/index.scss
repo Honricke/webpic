@@ -23,7 +23,8 @@
 }
 
 .comment-card {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   .comment-prof-img {
@@ -78,24 +79,83 @@
   font-weight: 900 !important;
 }
 
-.form-check{
+.form-check {
   display: flex;
   align-items: center;
 }
 
-.check{
+.check {
   width: 28px;
   height: 28px;
 
   border: solid 1px $border;
 }
 
-.border-bottom{
+.border-bottom {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid $border;
 
   box-shadow: none !important;
+}
+
+.arrow-img {
+  transform: rotate(90deg); /* estado fechado (baixo) */
+  transition: transform 0.3s ease;
+}
+
+.arrow-img.open {
+  transform: rotate(-90deg); /* estado aberto (cima) */
+}
+
+.pre-seta {
+  ul {
+    list-style: none;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $text-color;
+    font-size: $h6-font-size;
+    margin: 0.25rem 0;
+    white-space: normal;
+  }
+  a,
+  ul > li > a {
+    position: relative;
+    &::before {
+      content: "";
+      font-weight: 900;
+      background-image: url(../assets/img/icons/Seta-color.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -1em;
+      top: 0.3em;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 10px;
+  padding: 0.3rem 0.7rem;
+}
+
+.back-to-top img {
+  width: 12px;
+  transform: rotate(-90deg) translatex(25%); /* ajuste se precisar */
+  filter: invert(1) brightness(2);
+}
+
+.back-to-top:active {
+  background-color: $primary !important;
 }
 
 @media (min-width: 768px) {
@@ -108,6 +168,10 @@
   .planos-card {
     width: 260px;
     height: 775px;
+  }
+
+  .back-to-top {
+    right: calc((100vw - 1200px) / 2 + 20px);
   }
 }
 

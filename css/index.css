@@ -12331,6 +12331,7 @@ textarea.form-control-lg {
   font-weight: "normal";
   font-style: normal;
   color: #1E273B;
+  line-height: 1.3rem;
 }
 
 html,
@@ -12339,10 +12340,15 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 main {
   flex: 1;
+}
+
+.fs-55 {
+  font-size: 1.1rem;
 }
 
 .fs-7 {
@@ -12468,7 +12474,7 @@ div.navbar-container button.button-close {
   border-radius: 30px;
   font-size: 1.25rem;
   padding: 1rem 1.5rem;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .main-button {
@@ -12584,6 +12590,64 @@ div.navbar-container button.button-close {
   box-shadow: none !important;
 }
 
+.arrow-img {
+  transform: rotate(90deg); /* estado fechado (baixo) */
+  transition: transform 0.3s ease;
+}
+
+.arrow-img.open {
+  transform: rotate(-90deg); /* estado aberto (cima) */
+}
+
+.pre-seta ul {
+  list-style: none;
+}
+.pre-seta a {
+  display: inline-block;
+  text-decoration: none;
+  color: #1E273B;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  white-space: normal;
+}
+.pre-seta a,
+.pre-seta ul > li > a {
+  position: relative;
+}
+.pre-seta a::before,
+.pre-seta ul > li > a::before {
+  content: "";
+  font-weight: 900;
+  background-image: url(../assets/img/icons/Seta-color.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -1em;
+  top: 0.3em;
+  width: 12px;
+  height: 12px;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 10px;
+  padding: 0.3rem 0.7rem;
+}
+
+.back-to-top img {
+  width: 12px;
+  transform: rotate(-90deg) translatex(25%); /* ajuste se precisar */
+  filter: invert(1) brightness(2);
+}
+
+.back-to-top:active {
+  background-color: #0d4a9b !important;
+}
+
 @media (min-width: 768px) {
   .img-company-item {
     max-width: auto;
@@ -12594,6 +12658,9 @@ div.navbar-container button.button-close {
   .planos-card {
     width: 260px;
     height: 775px;
+  }
+  .back-to-top {
+    right: calc((100vw - 1200px) / 2 + 20px);
   }
 }
 @media (min-width: 1400px) {

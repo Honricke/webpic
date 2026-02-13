@@ -5,6 +5,7 @@
   font-style: normal;
 
   color: $text-color;
+  line-height: 1.3rem;
 }
 
 html,
@@ -14,6 +15,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -21,6 +23,10 @@ main {
 }
 
 //Adicionando textos de tamanho
+.fs-55 {
+  font-size: 1.1rem;
+}
+
 .fs-7 {
   font-size: 0.9rem;
 }

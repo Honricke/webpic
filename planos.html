@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -16,7 +16,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link
       rel="stylesheet"
@@ -871,6 +874,7 @@
               class="logo-img"
               src="./assets/img/logos/NavIcon@2x.png"
               alt=""
+              loading="lazy"
               width="170"
               height="50"
             />
@@ -884,6 +888,7 @@
                   alt=""
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
               <a class="" href="#">
@@ -892,6 +897,7 @@
                   alt=""
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
               <a class="" href="#">
@@ -900,6 +906,7 @@
                   alt=""
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
               <a class="" href="#">
@@ -908,6 +915,7 @@
                   alt=""
                   width="50"
                   height="50"
+                  loading="lazy"
                 />
               </a>
             </section>
@@ -917,7 +925,7 @@
               class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
             >
               <div class="d-flex flex-column gap-4 gap-md-2">
-                <a class="text-decoration-none text-reset" href="#"
+                <a class="text-decoration-none text-reset" href="./index.html"
                   >Recursos do Sistema</a
                 >
                 <a
@@ -928,18 +936,25 @@
                 <a class="text-decoration-none text-reset" href="./planos.html"
                   >Planos e Preços</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
-                  >Recursos do Sistema</a
+                <a class="text-decoration-none text-reset" href="./contato.html"
+                  >Contato</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://www.webpic.com.br/indique_ganhe/"
+                  >Indique e Ganhe</a
                 >
               </div>
               <div class="d-flex flex-column gap-4 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./sobre.html"
                   >Sobre nós</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://webpic.vagas.solides.com.br"
                   >Trabalhe Conosco</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
+                <a class="text-decoration-none text-reset" href="./privacidade"
                   >Política de Privacidade</a
                 >
                 <a class="text-decoration-none text-reset" href="./termo.html"
@@ -950,12 +965,15 @@
                   href="./denuncia.html"
                   >Canal de Denúncia</a
                 >
+                <a class="text-decoration-none text-reset" href="./portal.html"
+                  >Portal de Integridade Corporativa</a
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="row mt-5">
-          <p class="text-center fs-8 m-0">
+          <p class="text-center fs-7 m-0">
             ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
             reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
             – Brasil – 15014-050

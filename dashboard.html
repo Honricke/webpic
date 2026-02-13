@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -16,7 +16,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link rel="stylesheet" href="./css/index.css" />
 
@@ -268,12 +271,12 @@
     </header>
 
     <main>
-      <!--Versão Mobile-->
+      <!--Section 1 - Mobile-->
       <section class="container p-4 px-md-0 d-md-none">
         <h1 class="fs-1 text-center">
           Conheça o <span class="text-primary">Dashboard</span> do Dapic!
         </h1>
-        <p class="fs-7 fs-md-6 text-center">
+        <p class="fs-7 fs-md-6" style="text-align: justify">
           Visualize os principais indicadores da sua confecção ou loja de roupas
           em um só lugar. Acompanhe vendas, produção, financeiro e estoque com
           dados atualizados para decisões rápidas.
@@ -294,13 +297,13 @@
         </button>
       </section>
 
-      <!--Versão Desktop-->
+      <!--Section 1 - Desktop-->
       <section class="container p-4 d-md-block d-none">
         <div class="d-flex flex-column text-center align-items-center mb-4">
           <h1 class="fs-3">
             Conheça o <span class="text-primary">Dashboard</span> do Dapic!
           </h1>
-          <p class="fs-7 fs-md-6 my-3">
+          <p class="fs-7 fs-md-6 my-3" style="text-align: justify">
             Conte informações completas sobre a empresa, incluindo dados sobre a
             carteira de clientes, crescimento, lucro, ticket médio e fluxo de
             caixa. Além disso, o sistema oferece informações sobre pedidos e
@@ -322,6 +325,264 @@
             type="video/mp4"
           />
         </video>
+      </section>
+
+      <!--Sessão 2 - Desktop-->
+      <section class="container-fluid d-none d-md-block bg-primary">
+        <div class="container py-5 d-flex gap-4 align-items-center">
+          <div class="col">
+            <h1 class="fs-3 text-light">
+              Produção sob controle, da entrada de matéria-prima à entrega
+            </h1>
+            <p class="text-break my-4 text-light">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada. Organize sua produção por modelo,
+              grade de tamanho e cor, garantindo rastreabilidade e agilidade na
+              entrega final.
+            </p>
+            <a class="main-button btn bg-light-blue" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+          <div class="col">
+            <img
+              class="img-fluid w-100"
+              loading="lazy"
+              style="max-width: 550px"
+              src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Sessão 2 - Mobile-->
+      <section class="container-fluid d-md-none bg-primary">
+        <div class="container pb-5 pt-4 text-center">
+          <h1 class="fs-3 text-light">
+            Produção sob controle, da entrada de matéria-prima à entrega
+          </h1>
+          <div>
+            <img
+              class="img-fluid w-100"
+              loading="lazy"
+              style="max-width: 550px"
+              src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+              alt=""
+            />
+          </div>
+          <p class="text-break my-4 text-center text-light">
+            Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+            acompanhar pedidos, fichas técnicas, ordens de produção e
+            apontamentos de forma integrada. Organize sua produção por modelo,
+            grade de tamanho e cor, garantindo rastreabilidade e agilidade na
+            entrega final.
+          </p>
+          <a class="main-button btn bg-light-blue" href="#sessao-contato"
+            >Conheça o Dapic!</a
+          >
+        </div>
+      </section>
+
+      <!--Sessão 3-->
+      <section class="container-fluid bg-secondary d-none d-md-block">
+        <div class="container pb-5 pt-4 text-center">
+          <h1 class="fs-3">Todo estoque em um só local</h1>
+
+          <div class="d-flex gap-5">
+            <p class="text-break my-4" style="text-align: justify">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada.
+            </p>
+            <p class="text-break my-4" style="text-align: justify">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada.
+            </p>
+            <p class="text-break my-4" style="text-align: justify">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada.
+            </p>
+          </div>
+
+          <img
+            class="img-fluid w-100 mb-3"
+            loading="lazy"
+            src="./assets/img/posters/videoframe_0.webp"
+            alt=""
+          />
+
+          <a class="main-button btn" href="#sessao-contato">Conheça o Dapic!</a>
+        </div>
+      </section>
+
+      <!--Section 4, 5, 6-->
+      <section>
+        <!--Sessão 4 - Desktop-->
+        <section class="container-fluid d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <h1 class="fs-3">
+                Produção sob controle, da entrada de matéria-prima à entrega
+              </h1>
+              <p class="text-break my-4">
+                Gerencie cada etapa da sua confecção com precisão. O Dapic
+                permite acompanhar pedidos, fichas técnicas, ordens de produção
+                e apontamentos de forma integrada. Organize sua produção por
+                modelo, grade de tamanho e cor, garantindo rastreabilidade e
+                agilidade na entrega final.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 4 - Mobile-->
+        <section class="container-fluid d-md-none">
+          <div class="container pb-5 pt-4 text-center">
+            <h1 class="fs-3">
+              Produção sob controle, da entrada de matéria-prima à entrega
+            </h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_aumente-produtividade@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4 text-center">
+              Gerencie cada etapa da sua confecção com precisão. O Dapic permite
+              acompanhar pedidos, fichas técnicas, ordens de produção e
+              apontamentos de forma integrada. Organize sua produção por modelo,
+              grade de tamanho e cor, garantindo rastreabilidade e agilidade na
+              entrega final.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
+
+        <!--Sessão 5 - Desktop-->
+        <section class="container-fluid bg-secondary d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                loading="lazy"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_estoque_início@2x.webp"
+                alt=""
+              />
+            </div>
+            <div class="col">
+              <h1 class="fs-3">Estoque sempre certo, sem surpresas</h1>
+              <p class="text-break my-4">
+                Evite rupturas ou excesso de produtos. Com o Dapic, seu estoque
+                é atualizado automaticamente a cada venda, compra ou produção.
+                Controle por grade (tamanho e cor), alertas de mínimo,
+                localização em múltiplos depósitos e visualização clara do que
+                está disponível, reservado ou em produção.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 5 - Mobile-->
+        <section class="container-fluid bg-secondary d-md-none">
+          <div class="container pb-5 pt-4 text-center">
+            <h1 class="fs-3">Estoque sempre certo, sem surpresas</h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_estoque_início@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4">
+              Evite rupturas ou excesso de produtos. Com o Dapic, seu estoque é
+              atualizado automaticamente a cada venda, compra ou produção.
+              Controle por grade (tamanho e cor), alertas de mínimo, localização
+              em múltiplos depósitos e visualização clara do que está
+              disponível, reservado ou em produção.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
+
+        <!--Sessão 6 - Desktop-->
+        <section class="container-fluid d-none d-md-block">
+          <div class="container py-5 d-flex gap-4 align-items-center">
+            <div class="col">
+              <h1 class="fs-3">Emissão de nota fiscal sem complicação</h1>
+              <p class="text-break my-4">
+                Emita NF-e e NFC-e direto do sistema, com integração automática
+                à Sefaz. O Dapic facilita o faturamento de pedidos e vendas em
+                poucos cliques, evitando erros fiscais. Ideal para lojas
+                físicas, online e indústrias de confecção que precisam manter
+                tudo em conformidade com agilidade.
+              </p>
+              <a class="main-button btn" href="#sessao-contato"
+                >Conheça o Dapic!</a
+              >
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_BI-faturamento@2x.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!--Sessão 6 - Mobile-->
+        <section class="container-fluid d-md-none">
+          <div class="container pb-5 pt-4 text-center d-md-block">
+            <h1 class="fs-3">Emissão de nota fiscal sem complicação</h1>
+            <div>
+              <img
+                class="img-fluid w-100"
+                style="max-width: 550px"
+                src="./assets/img/commom/img_BI-faturamento@2x.webp"
+                alt=""
+              />
+            </div>
+            <p class="text-break my-4">
+              Emita NF-e e NFC-e direto do sistema, com integração automática à
+              Sefaz. O Dapic facilita o faturamento de pedidos e vendas em
+              poucos cliques, evitando erros fiscais. Ideal para lojas físicas,
+              online e indústrias de confecção que precisam manter tudo em
+              conformidade com agilidade.
+            </p>
+            <a class="main-button btn" href="#sessao-contato"
+              >Conheça o Dapic!</a
+            >
+          </div>
+        </section>
       </section>
     </main>
 
@@ -384,7 +645,7 @@
               class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
             >
               <div class="d-flex flex-column gap-4 gap-md-2">
-                <a class="text-decoration-none text-reset" href="#"
+                <a class="text-decoration-none text-reset" href="./index.html"
                   >Recursos do Sistema</a
                 >
                 <a
@@ -395,18 +656,25 @@
                 <a class="text-decoration-none text-reset" href="./planos.html"
                   >Planos e Preços</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
-                  >Recursos do Sistema</a
+                <a class="text-decoration-none text-reset" href="./contato.html"
+                  >Contato</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://www.webpic.com.br/indique_ganhe/"
+                  >Indique e Ganhe</a
                 >
               </div>
               <div class="d-flex flex-column gap-4 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./sobre.html"
                   >Sobre nós</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://webpic.vagas.solides.com.br"
                   >Trabalhe Conosco</a
                 >
-                <a class="text-decoration-none text-reset" href="#"
+                <a class="text-decoration-none text-reset" href="./privacidade"
                   >Política de Privacidade</a
                 >
                 <a class="text-decoration-none text-reset" href="./termo.html"
@@ -416,6 +684,9 @@
                   class="text-decoration-none text-reset"
                   href="./denuncia.html"
                   >Canal de Denúncia</a
+                >
+                <a class="text-decoration-none text-reset" href="./portal.html"
+                  >Portal de Integridade Corporativa</a
                 >
               </div>
             </div>

@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Portal de Integridade</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container navbar-container mx-auto">
+          <a class="navbar-brand my-3" href="/index.html">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              width="105"
+              height="30"
+            />
+          </a>
+
+          <!--Button para quebra de tela (mobile)-->
+          <button
+            class="navbar-toggler bg-primary navbar-dark border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Header desktop-->
+          <div class="d-none d-lg-flex justify-content-between w-100">
+            <!--Tópicos do nav-->
+            <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="dropNavLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recursos do Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="dropNavLink"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="./dashboard.html"
+                              >Dashboard</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Cadastros</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Compras e Estoque</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Faturamento e Fiscal</a
+                            >
+                          </li>
+                          <li><a class="dropdown-item" href="#">PDV</a></li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a class="dropdown-item" href="#">Produção</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Entrega</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Financeiro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/integracoes.html"
+                  >Integrações</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/planos.html"
+                  >Planos e Preços</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-text-color" href="/contato.html"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <!--Botões personalizados-->
+            <section class="d-flex">
+              <button class="btn me-2 main-button" type="submit">
+                Teste grátis
+              </button>
+              <button class="btn neg-button" type="submit">
+                Acessar Dapic
+                <span class="ms-1">
+                  <img
+                    src="../assets/img/icons/foguete@2x.png"
+                    alt=""
+                    width="10px"
+                  />
+                </span>
+              </button>
+            </section>
+          </div>
+
+          <!--Nav Mobile-->
+          <div
+            class="offcanvas offcanvas-end d-lg-none bg-secondary p-2"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            data-bs-backdrop="false"
+            aria-controls="offcanvasRight"
+          >
+            <div class="offcanvas-header">
+              <img
+                class="logo-img"
+                src="./assets/img/logos/NavIcon@2x.png"
+                alt=""
+                width="80"
+                height="22.5"
+              />
+              <button
+                type="button"
+                class="text-reset button-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <!--Offcanvas Body-->
+            <div class="offcanvas-body">
+              <ul class="list-unstyled offcanvas-list">
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-menu"
+                  >
+                    Recursos do Dapic
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="collapse-menu">
+                    <ul>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="./dashboard.html"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Cadastros</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Compras e Estoque</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >Faturamento e Fiscal</a
+                        >
+                      </li>
+                      <li><a class="nav-link ps-3 my-3" href="#">PDV</a></li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Produção</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Entrega</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#">Financeiro</a>
+                      </li>
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./integracoes.html" class="nav-link">Integrações</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./planos.html" class="nav-link">Planos e Preços</a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                  <a href="./contato.html" class="nav-link">Contato</a>
+                </li>
+                <hr />
+              </ul>
+
+              <section class="col">
+                <button class="btn main-button w-100 my-2" type="submit">
+                  Teste grátis
+                </button>
+                <button class="btn light-button w-100 my-2" type="submit">
+                  Acessar o Dapic
+                  <span class="ms-1">
+                    <img
+                      src="./assets/img/icons/foguete@2x.png"
+                      alt=""
+                      width="10px"
+                    />
+                  </span>
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <a href="#top" class="back-to-top btn main-button">
+        <img src="./assets/img/icons/Seta-color.png" alt="Voltar ao topo" />
+      </a>
+
+      <!--Section 1-->
+      <section class="container p-4">
+        <div class="d-flex flex-column text-center align-items-center mb-4">
+          <h1 class="fs-3 fw-bold">Portal de Integridade Corporativa Webpic</h1>
+          <p class="fs-55 my-3 text-center">
+            Bem-vindo ao Portal de Integridade Corporativa WebPic. Este espaço
+            digital é dedicado à divulgação de informações precisas e
+            transparentes, estabelecendo uma linha de comunicação direta com
+            todos os nossos stakeholders.
+            <br />
+            <br />
+            Este portal reflete nosso compromisso constante com a ética, que
+            guia cada uma de nossas iniciativas. Encorajamos você a navegar
+            pelas páginas do portal e a se engajar conosco nesta trajetória
+            contínua de confiança, transparência e integridade.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 2 - Desktop-->
+      <section class="container-fluid p-4 bg-secondary d-none d-md-block">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <ul class="navbar-nav mx-xxl-5 mx-xl-4 mb-2 mb-lg-0 d-flex flex-row">
+            <li class="nav-item mx-4">
+              <div class="dropdown">
+                <!--Link para abrir dropdown-->
+                <a
+                  class="nav-link fs-55 text-text-color dropdown-toggle"
+                  aria-current="page"
+                  href="#"
+                  id="dropPoliticas"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Políticas e Regulamentos
+                </a>
+                <!--Menu de dropdown-->
+                <div
+                  class="dropdown-menu bg-secondary p-3"
+                  aria-labelledby="dropPoliticas"
+                >
+                  <ul class="ps-3">
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec3"
+                        >Código de Conduta</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec4"
+                        >Política de Privacidade</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec5"
+                        >Glossário de Segurança da Informação</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec6"
+                        >Política de Backup</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item fs-55 my-2"
+                        href="#sec7"
+                        style="white-space: nowrap"
+                        >Política de Segurança da Informação (PSI)</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec8"
+                        >Política de Acesso</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec9"
+                        >Cartilha de Orientações aos Titulares de Dados</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-55 text-text-color" href="#sec10"
+                >Termos e Conscientização</a
+              >
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link fs-55 text-text-color" href="#sec11">Relatórios</a>
+            </li>
+            <li class="nav-item mx-4">
+              <div class="dropdown">
+                <!--Link para abrir dropdown-->
+                <a
+                  class="nav-link fs-55 text-text-color dropdown-toggle"
+                  aria-current="page"
+                  href="/recursos.html"
+                  id="dropContato"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Contato e Suporte
+                </a>
+                <!--Menu de dropdown-->
+                <div
+                  class="dropdown-menu bg-secondary p-3"
+                  aria-labelledby="dropPoliticas"
+                >
+                  <ul class="ps-3">
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec12"
+                        >Comitê Gestor de Proteção de Dados Pessoais</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item fs-55 my-2"
+                        href="#sec13"
+                        style="white-space: nowrap"
+                        >Encarregado de Dados - DPO</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec14"
+                        >Programa de Integridade e Práticas Regulatórias -
+                        Terceiros / Fornecedores</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec15"
+                        >Contato, Suporte e Denúncia</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Section 2 - Mobile-->
+      <section class="container-fluid p-4 d-md-none">
+        <div
+          class="container d-flex flex-column align-items-center p-4 bg-secondary"
+        >
+          <div
+            class="d-flex flex-column align-items-center"
+            data-bs-toggle="collapse"
+            href="#collTopicos"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collTopicos"
+          >
+            <h4 class="fs-4 fw-bold mb-0">Acessar Tópicos</h4>
+
+            <i
+              ><img
+                class="arrow-img"
+                src="./assets/img/icons/Seta-color.png"
+                alt=""
+                width="10"
+            /></i>
+          </div>
+
+          <div class="collapse py-3" id="collTopicos" style="width: 100%">
+            <ul style="list-style: none" class="ps-0">
+              <li class="nav-item pre-seta ps-3">
+                <a
+                  class="text-text-color text-decoration-none"
+                  data-bs-toggle="collapse"
+                  href="#collPoliticas"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collPoliticas"
+                >
+                  Políticas e Regulamentos
+                </a>
+                <div class="collapse" id="collPoliticas">
+                  <ul class="ps-3">
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec3"
+                        >Código de Conduta</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec4"
+                        >Política de Privacidade</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec5"
+                        >Glossário de Segurança da Informação</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec6"
+                        >Política de Backup</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec7"
+                        >Política de Segurança da Informação (PSI)</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec8"
+                        >Política de Acesso</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item fs-55 my-2" href="#sec9"
+                        >Cartilha de Orientações aos Titulares de Dados</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="my-3">
+                <a class="nav-link text-text-color" href="#sec10"
+                  >Termos e Conscientização</a
+                >
+              </li>
+              <li class="my-3">
+                <a class="nav-link text-text-color" href="#sec11">Relatórios</a>
+              </li>
+              <li class="pre-seta ps-3">
+                <a
+                  class="text-text-color text-decoration-none"
+                  data-bs-toggle="collapse"
+                  href="#collContato"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collContato"
+                >
+                  Contato e Suporte
+                </a>
+                <div class="collapse" id="collContato">
+                  <ul>
+                    <li>
+                      <a class="fs-55 my-2" href="#sec12"
+                        >Comitê Gestor de Proteção de Dados Pessoais</a
+                      >
+                    </li>
+                    <li>
+                      <a class="fs-55 my-2" href="#sec13"
+                        >Encarregado de Dados - DPO</a
+                      >
+                    </li>
+                    <li>
+                      <a class="fs-55 my-2" href="#sec14"
+                        >Programa de Integridade e Práticas Regulatórias -
+                        Terceiros / Fornecedores</a
+                      >
+                    </li>
+                    <li>
+                      <a class="fs-55 my-2" href="#sec15"
+                        >Contato, Suporte e Denúncia</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--Section 3-->
+      <section class="container-fluid p-4" id="sec3">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h3 class="text-primary fw-bold fs-4 mb-4 text-center">
+            Políticas e Regulamentos
+          </h3>
+
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Código de Conduta
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            O Código de Conduta da WebPic define os valores éticos fundamentais
+            e as normas de comportamento esperadas de nossos colaboradores em
+            todas as suas atividades profissionais. Este documento aborda temas
+            como integridade, respeito mútuo, transparência, responsabilidade
+            social e ambiental, gestão de conflitos de interesse, políticas de
+            presentes e hospitalidade, e outras diretrizes específicas
+            pertinentes às nossas operações.
+          </p>
+
+          <a
+            class="main-button btn px-4 py-3 fs-55"
+            href="#"
+            style="border-radius: 50px"
+          >
+            Acesso e download do Código de Contuda
+          </a>
+        </div>
+      </section>
+
+      <!--Section 4-->
+      <section class="container-fluid p-4 bg-secondary" id="sec4">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Política e Privacidade
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            Na WebPic, priorizamos a privacidade e a segurança dos dados
+            pessoais dos nossos usuários. Nossa Política de Privacidade explica
+            de forma transparente os procedimentos de coleta, utilização,
+            proteção e compartilhamento de seus dados pessoais ao utilizar
+            nossos serviços online.
+          </p>
+
+          <a
+            class="main-button btn px-4 py-3 fs-55"
+            href="#"
+            style="border-radius: 50px"
+          >
+            Acesso e download do Política e Privacidade
+          </a>
+        </div>
+      </section>
+
+      <!--Section 5-->
+      <section class="container-fluid p-4" id="sec5">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Glossário de Segurança da Informação
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            O Glossário de Segurança da Informação da WebPic oferece definições
+            padronizadas de termos e conceitos essenciais à segurança da
+            informação. Esta ferramenta auxilia na clara compreensão e
+            comunicação entre nossos colaboradores, reforçando a cultura de
+            segurança da informação na empresa.
+          </p>
+
+          <a
+            class="main-button btn px-4 py-3 fs-55"
+            href="#"
+            style="border-radius: 50px"
+          >
+            Acesso e download do Glossário de Segurança da Informação
+          </a>
+        </div>
+      </section>
+
+      <!--Section 6-->
+      <section class="container-fluid p-4 bg-secondary" id="sec6">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Política de Backup
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            A Política de Backup da WebPic especifica as práticas e
+            procedimentos para realizar backups dos dados e sistemas críticos da
+            empresa. Ela detalha a periodicidade, métodos e a conservação dos
+            backups para assegurar a recuperação e disponibilidade dos dados em
+            caso de perda ou falhas técnicas.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 7-->
+      <section class="container-fluid p-4" id="sec7">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Política de Segurança da Informação (PSI)
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            A PSI da WebPic estabelece diretrizes rigorosas para a proteção e o
+            manejo adequado das informações e sistemas corporativos. Trata de
+            temas como classificação da informação, controle de acesso, gestão
+            de senhas, uso adequado de recursos tecnológicos, prevenção de
+            malware e resposta a incidentes de segurança, visando preservar a
+            confidencialidade, integridade e disponibilidade das informações.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 8-->
+      <section class="container-fluid p-4 bg-secondary" id="sec8">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Política de Acesso
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            Nossa Política de Acesso delineia critérios e procedimentos para a
+            concessão e controle de acesso aos recursos físicos e tecnológicos
+            da empresa. Define normas para autenticação, autorização, revisão
+            periódica de acessos, limitação de privilégios e proteção de
+            informações sensíveis, assegurando que apenas pessoal autorizado
+            tenha acesso às ferramentas necessárias para suas funções.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 9-->
+      <section class="container-fluid p-4" id="sec9">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Cartilha de Orientações aos Titulares de Dados
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            A Cartilha de Orientações aos Titulares de Dados da WebPic é um
+            recurso informativo projetado para fornecer diretrizes claras e
+            acessíveis sobre como coletamos, armazenamos, utilizamos e
+            protegemos os dados pessoais de nossos clientes, parceiros e
+            colaboradores. Este guia abrange aspectos como as finalidades do
+            tratamento de dados, direitos dos titulares, compartilhamento de
+            informações, medidas de segurança implementadas, além de oferecer
+            canais de contato para dúvidas e solicitações relacionadas à
+            privacidade.
+          </p>
+
+          <a
+            class="main-button btn px-4 py-3 fs-55"
+            href="#"
+            style="border-radius: 50px"
+          >
+            Acesso e download do Cartilha de Orientações aos Titulares de Dados
+          </a>
+        </div>
+      </section>
+
+      <!--Section 10-->
+      <section class="container-fluid p-4 bg-secondary" id="sec10">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h3 class="text-primary fw-bold fs-4 mb-4 text-center">
+            Treinamentos e Conscientização
+          </h3>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            Reconhecendo a importância da capacitação, a WebPic investe no
+            treinamento e conscientização de nossos colaboradores sobre práticas
+            seguras de proteção de dados e a conformidade com a Lei Geral de
+            Proteção de Dados (LGPD). Desenvolvemos treinamentos e materiais de
+            apoio, que detalham a LGPD e as melhores práticas de segurança de
+            dados no ambiente de trabalho, permitindo aos colaboradores
+            flexibilidade no acesso e revisão do conteúdo conforme necessário.
+            Nosso objetivo é assegurar que todos estejam aptos a gerenciar dados
+            pessoais de forma segura e em conformidade com a legislação vigente.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 11-->
+      <section class="container-fluid p-4" id="sec11">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h3 class="text-primary fw-bold fs-4 mb-4 text-center">Relatórios</h3>
+
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Relatório Anual
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            O "Relatório Anual" da WebPic oferece uma visão completa e
+            transparente das nossas atividades, desempenho, conquistas e
+            desafios do ano, além de detalhar nosso progresso em compromissos de
+            sustentabilidade e responsabilidade social. Este documento é
+            essencial para manter uma comunicação clara com todos os
+            stakeholders da empresa, incluindo clientes, investidores e a
+            comunidade, fortalecendo a confiança e a credibilidade da nossa
+            marca.
+          </p>
+
+          <a
+            class="main-button btn px-4 py-3 fs-55"
+            href="#"
+            style="border-radius: 50px"
+          >
+            Acesso e download do Relatório Anual
+          </a>
+        </div>
+      </section>
+
+      <!--Section 12-->
+      <section class="container-fluid p-4 bg-secondary" id="sec12">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h3 class="text-primary fw-bold fs-4 mb-4 text-center">
+            Contato e Suporte
+          </h3>
+
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Comitê Gestor de Proteção de Dados Pessoais
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            O Comitê Gestor de Proteção de Dados Pessoais da WebPic tem um papel
+            crucial na governança, consultoria e suporte, atuando como um
+            facilitador essencial na promoção de uma cultura de privacidade e na
+            proteção de dados dentro da empresa. Este comitê é fundamental para
+            a tomada de decisões unificadas e em conformidade com o planejamento
+            estratégico da empresa, minimizando conflitos de interesse e sendo
+            apoiado constantemente pelas nossas políticas de privacidade e
+            segurança da informação. As atividades deste comitê abordam questões
+            que vão além da Lei 13.709 de 14 de agosto de 2018 (Lei Geral de
+            Proteção de Dados), incluindo a segurança das informações
+            corporativas, o que é essencial para o tratamento eficaz das
+            questões de privacidade.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 13-->
+      <section class="container-fluid p-4" id="sec13">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Encarregado de Dados - DPO
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            O Encarregado de Proteção de Dados (DPO) é uma posição essencial
+            conforme estabelecido pela Lei Geral de Proteção de Dados Pessoais.
+            O DPO serve como ponto de comunicação entre a WebPic, os titulares
+            dos dados e a Autoridade Nacional de Proteção de Dados (ANPD). Este
+            profissional é responsável por realizar auditorias regulares para
+            assegurar que a empresa cumpra integralmente com as normativas
+            legais, regulamentos e obrigações estabelecidas pela legislação de
+            proteção de dados.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 14-->
+      <section class="container-fluid p-4 bg-secondary" id="sec14">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Programa de Integridade e Práticas Regulatórias -
+            Terceiros/Fornecedores
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            Nosso Programa de Integridade e Práticas Regulatórias é fundamental
+            para garantir que nossos parceiros e fornecedores adotem elevados
+            padrões de ética e conformidade. Através de formulários detalhados,
+            monitoramos e asseguramos que estas práticas estejam alinhadas aos
+            nossos valores corporativos, reforçando o compromisso com a
+            integridade e a transparência em toda nossa cadeia de suprimentos.
+            Este compromisso mútuo é vital para a confiança e sustentabilidade
+            de nossas operações e relações comerciais.
+          </p>
+        </div>
+      </section>
+
+      <!--Section 15-->
+      <section class="container-fluid p-4" id="sec15">
+        <div class="container d-flex flex-column align-items-center p-4">
+          <h5
+            class="text-primary fw-bold fs-55 text-center"
+            style="opacity: 80%"
+          >
+            Contato, Suporte e Denúncia
+          </h5>
+
+          <p class="text-center mb-4" style="max-width: 1000px">
+            Na WebPic, promovemos uma cultura de ética, conformidade e
+            transparência. Encorajamos que quaisquer questões ou relatos de
+            violações as normas de proteção de dados sejam direcionados ao nosso
+            encarregado de dados, Dr. Wilmer Martinez Filho, através do e-mail
+            <a href="mailto:privacidade@webpic.com.br" class="text-text-color"
+              >privacidade@webpic.com.br</a
+            >.
+            <br />
+            <br />
+            Adicionalmente, estamos aprimorando nossos canais de denúncia, com
+            foco especial no combate ao assédio e na criação de um processo
+            estruturado para o recebimento, acompanhamento e resolução de
+            denúncias, tudo sob a supervisão do nosso comitê de ética e conforme
+            as diretrizes da Lei Geral de Proteção de Dados Pessoais. Para fazer
+            uma denúncia, por favor, entre em contato através do e-mail
+            <a href="mailto:denuncia@webpic.com.br" class="text-text-color"
+              >denuncia@webpic.com.br</a
+            >
+            ou visite a nossa página de Denúncia
+            <a href="./denuncia.html">aqui</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid bg-secondary">
+      <div class="container p-5 pb-3">
+        <div class="row d-flex flex-column flex-md-row justify-content-center">
+          <div class="col d-flex align-items-center flex-column">
+            <img
+              class="logo-img"
+              src="./assets/img/logos/NavIcon@2x.png"
+              alt=""
+              loading="lazy"
+              width="170"
+              height="50"
+            />
+            <h2 class="fs-5 mt-3 text-center">
+              Tecnologia em cada ponto da confecção
+            </h2>
+            <section class="d-flex gap-4 gap-md-2 mt-2">
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Facebook@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Instagram@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Linkedin@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+              <a class="" href="#">
+                <img
+                  src="./assets/img/icons/Youtube@2x.png"
+                  alt=""
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+              </a>
+            </section>
+          </div>
+          <div class="col mt-4" style="font-size: 1.1rem">
+            <div
+              class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./index.html"
+                  >Recursos do Sistema</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./integracoes.html"
+                  >Integrações</a
+                >
+                <a class="text-decoration-none text-reset" href="./planos.html"
+                  >Planos e Preços</a
+                >
+                <a class="text-decoration-none text-reset" href="./contato.html"
+                  >Contato</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://www.webpic.com.br/indique_ganhe/"
+                  >Indique e Ganhe</a
+                >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-2">
+                <a class="text-decoration-none text-reset" href="./sobre.html"
+                  >Sobre nós</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://webpic.vagas.solides.com.br"
+                  >Trabalhe Conosco</a
+                >
+                <a class="text-decoration-none text-reset" href="./privacidade"
+                  >Política de Privacidade</a
+                >
+                <a class="text-decoration-none text-reset" href="./termo.html"
+                  >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./denuncia.html"
+                  >Canal de Denúncia</a
+                >
+                <a class="text-decoration-none text-reset" href="./portal.html"
+                  >Portal de Integridade Corporativa</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p class="text-center fs-7 m-0">
+            ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
+            reservados.<br />Rua Silva Jardim, 3630 – São José do Rio Preto, SP
+            – Brasil – 15014-050
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const collapseTopicos = document.getElementById("collTopicos");
+      const arrow = document.querySelector(".arrow-img");
+
+      collapseTopicos.addEventListener("show.bs.collapse", function (event) {
+        if (event.target.id === "collTopicos") {
+          arrow.classList.add("open");
+        }
+      });
+
+      collapseTopicos.addEventListener("hide.bs.collapse", function (event) {
+        if (event.target.id === "collTopicos") {
+          arrow.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>
