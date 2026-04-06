@@ -12443,6 +12443,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
   .trasformy-md-50 {
     transform: translatey(-50%) !important;
   }
@@ -12672,6 +12675,15 @@ div.navbar-container button.button-close {
   transform: rotate(-90deg); /* estado aberto (cima) */
 }
 
+.arrow-img2 {
+  transform: rotate(0deg); /* estado fechado (lado) */
+  transition: transform 0.3s ease;
+}
+
+.arrow-img2.open {
+  transform: rotate(90deg); /* estado aberto (baixo) */
+}
+
 .pre-seta ul {
   list-style: none;
 }
@@ -12721,6 +12733,11 @@ div.navbar-container button.button-close {
   background-color: #0d4a9b !important;
 }
 
+@media (max-width: 768px) {
+  .bg-position-35 {
+    background-position: 35% !important;
+  }
+}
 @media (min-width: 768px) {
   .img-company-item {
     max-width: auto;

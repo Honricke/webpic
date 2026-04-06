@@ -93,7 +93,7 @@
   border: solid 1px $border;
 }
 
-.trans-input{
+.trans-input {
   background-color: #ffffff00;
 
   border: 1px solid #000;
@@ -114,6 +114,15 @@
 
 .arrow-img.open {
   transform: rotate(-90deg); /* estado aberto (cima) */
+}
+
+.arrow-img2 {
+  transform: rotate(0deg); /* estado fechado (lado) */
+  transition: transform 0.3s ease;
+}
+
+.arrow-img2.open {
+  transform: rotate(90deg); /* estado aberto (baixo) */
 }
 
 .pre-seta {
@@ -164,6 +173,12 @@
 
 .back-to-top:active {
   background-color: $primary !important;
+}
+
+@media (max-width: 768px) {
+  .bg-position-35 {
+    background-position: 35% !important;
+  }
 }
 
 @media (min-width: 768px) {

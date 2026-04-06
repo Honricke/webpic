@@ -136,6 +136,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
   .trasformy-md-50 {
     transform: translatey(-50%) !important;
   }
