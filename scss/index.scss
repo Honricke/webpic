@@ -82,6 +82,8 @@
 .form-check {
   display: flex;
   align-items: center;
+
+  width: 150px;
 }
 
 .check {
@@ -89,6 +91,12 @@
   height: 28px;
 
   border: solid 1px $border;
+}
+
+.trans-input{
+  background-color: #ffffff00;
+
+  border: 1px solid #000;
 }
 
 .border-bottom {
@@ -143,7 +151,7 @@
   right: 10px;
   bottom: 10px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 900;
   border-radius: 10px;
   padding: 0.3rem 0.7rem;
 }

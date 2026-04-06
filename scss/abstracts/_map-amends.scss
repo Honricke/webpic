@@ -3,7 +3,7 @@ $custom-colors: (
     "light-blue": $light-blue,
     "roxo": $roxo,
     "dark-blue": $dark-blue,
-    "boder": $border
+    "border": $border
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

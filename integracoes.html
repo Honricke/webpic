@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,7 +14,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link href="./css/index.css" rel="stylesheet" />
 
@@ -62,7 +65,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Recursos do Dapic
+                    Funcionalidades do Dapic
                   </a>
                   <!--Menu de dropdown-->
                   <div
@@ -109,6 +112,127 @@
                           <li>
                             <a class="dropdown-item" href="#"
                               >B.I. (Business Intelligence) e Relatórios
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item mx-1">
+                <div class="dropdown">
+                  <!--Link para abrir dropdown-->
+                  <a
+                    class="nav-link text-text-color dropdown-toggle"
+                    aria-current="page"
+                    href="/recursos.html"
+                    id="toWhoDrop"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pra quem serve o Dapic
+                  </a>
+                  <!--Menu de dropdown-->
+                  <div
+                    class="dropdown-menu bg-secondary p-3"
+                    aria-labelledby="toWhoDrop"
+                  >
+                    <div class="d-flex">
+                      <!-- First column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Moda"
+                            >
+                              Moda
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Jeanswear"
+                            >
+                              Jeanswear
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Fitness"
+                            >
+                              Fitness/Esportivo
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Lingerie"
+                            >
+                              Lingerie/Pijamas
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Praia"
+                            >
+                              Moda Praia
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Infantil"
+                            >
+                              Infantil
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- Second column content -->
+                      <div class="column">
+                        <ul class="ps-3">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Uniformes"
+                            >
+                              Uniformes
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Camisaria"
+                            >
+                              Camisaria
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Plus"
+                            >
+                              Plus Size
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Streetwear"
+                            >
+                              Streetwear/Casual
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="./stakeholder.html?category=Private"
+                            >
+                              Private Label
                             </a>
                           </li>
                         </ul>
@@ -188,7 +312,7 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse-menu"
                   >
-                    Recursos do Dapic
+                    Funcionalidades do Dapic
                     <span class="plus-icon">+</span>
                   </a>
                   <div class="collapse mt-2" id="collapse-menu">
@@ -229,18 +353,149 @@
                     </ul>
                   </div>
                 </li>
+
                 <hr />
+
+                <li class="nav-item">
+                  <!--Collapse-->
+                  <a
+                    class="nav-link d-flex justify-content-beteen"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#toWhoMenu"
+                  >
+                    Pra quem serve o Dapic?
+                    <span class="plus-icon">+</span>
+                  </a>
+                  <div class="collapse mt-2" id="toWhoMenu">
+                    <ul>
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Moda"
+                        >
+                          Moda
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Jeanswear"
+                        >
+                          Jeanswear
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Fitness"
+                        >
+                          Fitness/Esportivo
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Lingerie"
+                        >
+                          Lingerie/Pijamas
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Praia"
+                        >
+                          Moda Praia
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Infantil"
+                        >
+                          Infantil
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Uniformes"
+                        >
+                          Uniformes
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Camisaria"
+                        >
+                          Camisaria
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Plus"
+                        >
+                          Plus Size
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Streetwear"
+                        >
+                          Streetwear/Casual
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item nav-link ps-3 my-3"
+                          href="./stakeholder.html?category=Private"
+                        >
+                          Private Label
+                        </a>
+                      </li>
+
+                      <li>
+                        <a class="nav-link ps-3 my-3" href="#"
+                          >B.I. (Business Intelligence) e Relatórios
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <hr />
+
                 <li class="nav-item">
                   <a href="./integracoes.html" class="nav-link">Integrações</a>
                 </li>
+
                 <hr />
+
                 <li class="nav-item">
                   <a href="./planos.html" class="nav-link">Planos e Preços</a>
                 </li>
+
                 <hr />
+
                 <li class="nav-item">
                   <a href="./contato.html" class="nav-link">Contato</a>
                 </li>
+
                 <hr />
               </ul>
 
@@ -415,67 +670,172 @@
       </section>
     </main>
 
+    <div id="floating-bar">
+      <a href="./contato.html"
+        ><img
+          style="margin-right: 10px"
+          class="logo-img"
+          src="./assets/img/icons/vibrate.png"
+          alt=""
+          width="24"
+          height="24"
+        /><span class="d-none d-md-inline text-white"
+          >Fale com o canal certo da WebPic na sua região!</span
+        ><span class="d-md-none text-white">Canal de Venda e Suporte!</span></a
+      >
+      <a
+        href="https://wa.me/551733550035?text=Oi!%20Quero%20conhecer%20o%20Dapic!"
+      >
+        <span class="d-none d-md-inline text-white"
+          >Chame o nosso time no WhatsApp!</span
+        >
+
+        <span class="d-md-none text-white">WhatsApp</span>
+        <img
+          style="margin-left: 10px"
+          class="logo-img"
+          src="./assets/img/icons/whatsapp.png"
+          alt=""
+          width="24"
+          height="24"
+      /></a>
+    </div>
+
     <footer class="container-fluid bg-secondary">
-      <div class="container p-5 pb-3">
-        <div class="row d-flex flex-column flex-md-row justify-content-center">
-          <div class="col d-flex align-items-center flex-column">
+      <div class="container p-3 pb-3">
+        <div
+          class="row d-flex flex-column flex-md-row justify-content-center gap-4"
+        >
+          <h2 class="fs-5 text-primary text-center text-md-start fw-bold">
+            Canais de atendimento
+          </h2>
+
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-3"
+          >
+            <div class="d-flex flex-column align-items-center">
+              <p class="fw-bold mb-1 text-center text-md-start d-md-none">
+                Fale com a gente pelo WhatsApp abaixo:
+              </p>
+              <p
+                class="fw-bold mb-1 text-center text-md-start d-none d-md-block"
+              >
+                Matriz
+              </p>
+              <a
+                href="https://wa.me/551733550035?text=Oi!%20Quero%20conhecer%20o%20Dapic!"
+                class="fw-bold d-flex align-items-center gap-1 text-center"
+                ><span class="blue-whats d-inline-block"></span>(17)
+                3355-0035</a
+              >
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+              <p class="fw-bold mb-1 text-center text-md-start">
+                Canal de Pernambuco
+              </p>
+              <a
+                href="https://wa.me/558199216560?text=Oi!%20Quero%20falar%20com%20o%20Canal%20de%20Venda%20e%20Suporte%20do%20Dapic%20em%20Pernambuco!"
+                class="fw-bold d-flex align-items-center gap-1 text-center"
+                ><span class="blue-whats d-inline-block"></span>(81)
+                9921-6560</a
+              >
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+              <p class="fw-bold mb-1 text-center text-md-start">
+                Canal de Ceará
+              </p>
+              <a
+                href="https://wa.me/558198443055?text=Oi!%20Quero%20falar%20com%20o%20Canal%20de%20Venda%20e%20Suporte%20do%20Dapic%20no%20Cear%C3%A1!"
+                class="fw-bold d-flex align-items-center gap-1 text-center"
+                ><span class="blue-whats d-inline-block"></span>(81)
+                9844-3055</a
+              >
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+              <p class="fw-bold mb-1 text-center text-md-start">
+                Canal de Paraíba
+              </p>
+              <a
+                href="https://wa.me/558393133061?text=Oi!%20Quero%20falar%20com%20o%20Canal%20de%20Venda%20e%20Suporte%20do%20Dapic%20na%20Para%C3%ADba!"
+                class="fw-bold d-flex align-items-center gap-1 text-center"
+                ><span class="blue-whats d-inline-block"></span>(83)
+                9313-3061</a
+              >
+            </div>
+          </div>
+
+          <section
+            class="d-flex gap-4 mt-2 w-100 justify-content-between justify-content-md-start"
+          >
+            <a class="" href="#">
+              <img
+                src="./assets/img/icons/Facebook@2x.png"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </a>
+            <a class="" href="#">
+              <img
+                src="./assets/img/icons/Instagram@2x.png"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </a>
+            <a class="" href="#">
+              <img
+                src="./assets/img/icons/Linkedin@2x.png"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </a>
+            <a class="" href="#">
+              <img
+                src="./assets/img/icons/Youtube@2x.png"
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+            </a>
+          </section>
+
+          <hr />
+
+          <div class="d-flex align-items-center flex-column w-auto">
             <img
               class="logo-img"
               src="./assets/img/logos/NavIcon@2x.png"
               alt=""
               loading="lazy"
-              width="170"
-              height="50"
+              width="120"
+              height="35"
             />
-            <h2 class="fs-5 mt-3 text-center">
-              Tecnologia em cada ponto da confecção
-            </h2>
-            <section class="d-flex gap-4 gap-md-2 mt-2">
-              <a class="" href="#">
-                <img
-                  src="./assets/img/icons/Facebook@2x.png"
-                  alt=""
-                  width="50"
-                  height="50"
-                  loading="lazy"
-                />
-              </a>
-              <a class="" href="#">
-                <img
-                  src="./assets/img/icons/Instagram@2x.png"
-                  alt=""
-                  width="50"
-                  height="50"
-                  loading="lazy"
-                />
-              </a>
-              <a class="" href="#">
-                <img
-                  src="./assets/img/icons/Linkedin@2x.png"
-                  alt=""
-                  width="50"
-                  height="50"
-                  loading="lazy"
-                />
-              </a>
-              <a class="" href="#">
-                <img
-                  src="./assets/img/icons/Youtube@2x.png"
-                  alt=""
-                  width="50"
-                  height="50"
-                  loading="lazy"
-                />
-              </a>
-            </section>
+            <p class="fs-6 mt-2 text-center">
+              Tecnologia em cada ponto da sua confecção!
+            </p>
           </div>
-          <div class="col mt-4" style="font-size: 1.1rem">
+
+          <div class="col mt-4 ms-md-5" style="font-size: 1.1rem">
             <div
               class="d-flex flex-column flex-md-row gap-4 gap-md-5 text-center text-md-start fs-md-6"
             >
-              <div class="d-flex flex-column gap-4 gap-md-2">
+              <div class="d-flex flex-column gap-4 gap-md-3 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./index.html"
-                  >Recursos do Sistema</a
+                  >Funcionalidades do Dapic</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="./stakeholder.html"
+                  >Pra quem serve o Dapic?</a
                 >
                 <a
                   class="text-decoration-none text-reset"
@@ -485,16 +845,11 @@
                 <a class="text-decoration-none text-reset" href="./planos.html"
                   >Planos e Preços</a
                 >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-3 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./contato.html"
                   >Contato</a
                 >
-                <a
-                  class="text-decoration-none text-reset"
-                  href="https://www.webpic.com.br/indique_ganhe/"
-                  >Indique e Ganhe</a
-                >
-              </div>
-              <div class="d-flex flex-column gap-4 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./sobre.html"
                   >Sobre nós</a
                 >
@@ -506,8 +861,15 @@
                 <a class="text-decoration-none text-reset" href="./privacidade"
                   >Política de Privacidade</a
                 >
+              </div>
+              <div class="d-flex flex-column gap-4 gap-md-3 gap-md-2">
                 <a class="text-decoration-none text-reset" href="./termo.html"
                   >Termos de Uso</a
+                >
+                <a
+                  class="text-decoration-none text-reset"
+                  href="https://www.webpic.com.br/indique_ganhe/"
+                  >Indique e Ganhe</a
                 >
                 <a
                   class="text-decoration-none text-reset"
@@ -521,6 +883,7 @@
             </div>
           </div>
         </div>
+
         <div class="row mt-5">
           <p class="text-center fs-7 m-0">
             ® 2025 WebPic Desenvolvimento de Software LTDA. Todos os direitos
@@ -531,6 +894,7 @@
       </div>
     </footer>
 
+    <script src="./js/floating-bar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
