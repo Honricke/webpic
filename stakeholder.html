@@ -275,18 +275,8 @@
             </ul>
             <!--Botões personalizados-->
             <section class="d-flex">
-              <button class="btn me-2 main-button" type="submit">
-                Teste grátis
-              </button>
-              <button class="btn neg-button" type="submit">
+              <button class="btn neg-button fw-bold" type="submit" style="color: #3D5A8C !important;">
                 Acessar Dapic
-                <span class="ms-1">
-                  <img
-                    src="../assets/img/icons/foguete@2x.png"
-                    alt=""
-                    width="10px"
-                  />
-                </span>
               </button>
             </section>
           </div>
@@ -543,7 +533,7 @@
         data-image="mainBanner"
         data-type="background"
       >
-        <div class="container py-5 my-3">
+        <div class="container my-5">
           <div class="w-md-50 d-grid gap-4 text-center text-md-start">
             <h1 class="fs-3 fw-bold text-white" data-key="mainTitle"></h1>
             <p class="text-break fs-6 text-white" data-key="mainText"></p>
@@ -629,15 +619,16 @@
       </section>
 
       <!--Sessão 3-->
-      <section class="container-fluid">
-        <div class="container py-3">
+      <section class="container-fluid overflow-hidden">
+        <div class="container mb-5">
           <div class="swiper card-swiper overflow-visible">
             <div class="swiper-wrapper">
               <div
                 class="bg-secondary rounded-4 d-flex flex-column align-items-center gap-3 p-4 swiper-slide"
+                style="width: 95%;"
               >
                 <h1
-                  class="fs-5 mt-3 mb-4 text-center"
+                  class="fs-5 mt-3 mb-0 text-center text-primary"
                   data-key="cards.firstTitle"
                 ></h1>
 
@@ -665,7 +656,7 @@
                 class="bg-secondary rounded-4 d-flex flex-column align-items-center gap-3 p-4 swiper-slide"
               >
                 <h1
-                  class="fs-5 mt-3 mb-4 text-center"
+                  class="fs-5 mt-3 mb-0 text-center text-primary"
                   data-key="cards.secondTitle"
                 ></h1>
 
@@ -691,9 +682,10 @@
 
               <div
                 class="bg-secondary rounded-4 d-flex flex-column align-items-center gap-3 p-4 swiper-slide"
+                style="width: 95%;"
               >
                 <h1
-                  class="fs-5 mt-3 mb-4 text-center"
+                  class="fs-5 mt-3 mb-0 text-center text-primary"
                   data-key="cards.thirdTitle"
                 ></h1>
 
@@ -721,11 +713,11 @@
         </div>
       </section>
 
-      <!--Sessão 4, 5 e 6-->
+      <!--Sessão 4, 5, 6 e 7-->
       <section>
         <!--Sessão 4 - Desktop-->
         <section class="container-fluid d-none d-md-block bg-primary">
-          <div class="container py-5 d-flex gap-4 align-items-center">
+          <div class="container d-flex py-4 gap-4 align-items-center">
             <div class="col">
               <h1 class="fs-3 text-white" data-key="sections.firstTitle"></h1>
               <p
@@ -777,7 +769,7 @@
 
         <!--Sessão 5 - Desktop-->
         <section class="container-fluid bg-secondary d-none d-md-block">
-          <div class="container py-5 d-flex gap-4 align-items-center">
+          <div class="container d-flex py-4 gap-4 align-items-center">
             <div class="col">
               <img
                 class="img-fluid w-100"
@@ -822,7 +814,7 @@
 
         <!--Sessão 6 - Desktop-->
         <section class="container-fluid d-none d-md-block">
-          <div class="container py-5 d-flex gap-4 align-items-center">
+          <div class="container d-flex py-4 gap-4 align-items-center">
             <div class="col">
               <h1 class="fs-3" data-key="sections.thirdTitle"></h1>
               <p class="text-break my-4" data-key="sections.thirdText"></p>
@@ -866,17 +858,7 @@
 
         <!--Sessão 7 - Desktop-->
         <section class="container-fluid d-none d-md-block bg-primary">
-          <div class="container py-5 d-flex gap-4 align-items-center">
-            <div class="col">
-              <h1 class="fs-3 text-white" data-key="sections.fourthTitle"></h1>
-              <p
-                class="text-break my-4 text-white"
-                data-key="sections.fourthText"
-              ></p>
-              <a class="main-button btn bg-light-blue" href="#sessao-contato"
-                >Fale com um especialista</a
-              >
-            </div>
+          <div class="container d-flex py-4 gap-4 align-items-center">
             <div class="col">
               <img
                 class="img-fluid w-100"
@@ -886,6 +868,17 @@
                 data-image="sectionFourth"
                 data-type="src"
               />
+            </div>
+
+            <div class="col">
+              <h1 class="fs-3 text-white" data-key="sections.fourthTitle"></h1>
+              <p
+                class="text-break my-4 text-white"
+                data-key="sections.fourthText"
+              ></p>
+              <a class="main-button btn bg-light-blue" href="#sessao-contato"
+                >Fale com um especialista</a
+              >
             </div>
           </div>
         </section>
